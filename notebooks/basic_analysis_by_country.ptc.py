@@ -62,35 +62,26 @@ df.describe()
 #%%
 num_subplots = len(df.columns)
 DEFAULT_PLOT_SIZE = 6
+PLOT_KIND = 'hist'  #'kde'
 #%%
 _, axs = plt.subplots(num_subplots,
                       1,
                       figsize=(DEFAULT_PLOT_SIZE,
                                DEFAULT_PLOT_SIZE * (num_subplots - 0.5)))
 for c, col in enumerate(df.columns):
+
     try:
-        df[col].plot(ax=axs[c],
-                     kind='hist',
-                     bins=20,
-                     title=f'Value distribution for: {col}')
+        kwargs = {"kind": PLOT_KIND}
+        if PLOT_KIND == 'hist':
+            kwargs = {"kind": PLOT_KIND, "bins": 20}
+
+        df[col].plot(title=f'Value distribution for: {col}',
+                     ax=axs[c],
+                     **kwargs)
     except:
-        df[col].plot(ax=axs[c],
-                     kind='hist',
-                     title=f'Value distribution for: {col}')
+        plt.plot(title=f'Value distribution for: {col}')
 plt.plot()
-#%%
-_, axs = plt.subplots(num_subplots,
-                      1,
-                      figsize=(DEFAULT_PLOT_SIZE,
-                               DEFAULT_PLOT_SIZE * (num_subplots - 0.5)))
-for c, col in enumerate(df.columns):
-    try:
-        df[col].plot(ax=axs[c],
-                     kind='kde',
-                     title=f'Value distribution for: {col}')
-    except:
-        pass
-plt.plot()
+
 #%% [markdown]
 # ### Parameter relationships
 #%%
