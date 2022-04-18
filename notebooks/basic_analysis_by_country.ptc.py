@@ -41,7 +41,11 @@ index_params = [
     'containment_health_index', 'economic_support_index'
 ]
 # country_params = ['latitude', 'longitude', 'population'] They are in `locations`, just ignore them
-study_params = covid_params + protection_params + health_sys_params + policy_params + index_params
+study_groups = [
+    covid_params, protection_params, health_sys_params, policy_params,
+    index_params
+]
+study_params = [elem for group in study_groups for elem in group]
 
 # Drop columns not to be studied
 df = df[study_params]
@@ -60,26 +64,29 @@ df.describe()
 #%% [markdown]
 # ### Parameter values
 #%%
-num_subplots = len(df.columns)
 DEFAULT_PLOT_SIZE = 6
 PLOT_KIND = 'hist'  #'kde'
+
+plot_kwargs = {"kind": PLOT_KIND}
+if PLOT_KIND == 'hist':
+    plot_kwargs = {"bins": 20, **plot_kwargs}
 #%%
+
+for x, group in enumerate(study_groups):
+    num_subplots = len(group)
 _, axs = plt.subplots(num_subplots,
                       1,
                       figsize=(DEFAULT_PLOT_SIZE,
                                DEFAULT_PLOT_SIZE * (num_subplots - 0.5)))
-for c, col in enumerate(df.columns):
+    for c, col in enumerate(group):
 
     try:
-        kwargs = {"kind": PLOT_KIND}
-        if PLOT_KIND == 'hist':
-            kwargs = {"kind": PLOT_KIND, "bins": 20}
-
         df[col].plot(title=f'Value distribution for: {col}',
                      ax=axs[c],
-                     **kwargs)
+                         **plot_kwargs)
     except:
-        plt.plot(title=f'Value distribution for: {col}')
+            plt.plot(title=f'EMPTY distribution for: {col}')
+
 plt.plot()
 
 #%% [markdown]
