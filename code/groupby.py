@@ -6,8 +6,10 @@ import inspect
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from typing import Callable, List, Tuple
-
+import matplotlib.pylab as plt
 import pandas as pd
+from matplotlib.axes import Axes
+import numpy as np
 
 
 @dataclass
@@ -186,3 +188,42 @@ class CovidCountryStudyGroupby(GroupbyMixin):
         """
 
         return data.groupby('administrative_area_level_1')
+
+    def plot_parameters(self) -> List[Axes]:
+        """
+        Plots regarding the parameters themselves.
+        """
+
+        print("Plot parameter values.")
+
+        param_axes = []
+        for col in self.data.columns:
+            plt.figure()
+            xy_values = np.array(
+                [[x, y]
+                 for (x,
+                      y) in zip(self.data.index.values, self.data[col].values)
+                 if not pd.isnull(x) and not pd.isnull(y)],
+                dtype='object')
+
+            if xy_values.size != 0:
+                df_to_plot = pd.DataFrame(xy_values[:, 1],
+                                          columns=[col],
+                                          index=xy_values[:, 0]).T
+                ax = df_to_plot.plot(title=col, kind='bar')
+                param_axes.append(ax)
+
+            plt.show()
+
+        return param_axes
+
+    def plot(self) -> List[Axes]:
+        """
+        Plots the necessary
+        """
+
+        plot_axes = []
+
+        plot_axes += self.plot_parameters()
+
+        return plot_axes

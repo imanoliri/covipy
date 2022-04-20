@@ -20,7 +20,8 @@ InteractiveShell.ast_node_interactivity = "all"
 #%%
 from study import CovidCountryStudy
 
-st = CovidCountryStudy.from_csv('./../data/timeseries_by_country.csv')
+st = CovidCountryStudy.from_csv('./../data/timeseries_by_country.csv',
+                                downsampling=7)
 df = st.data
 
 #%%
