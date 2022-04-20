@@ -46,12 +46,7 @@ class Study():
         Create instance from given DataFrame. Deletes columns that aren't either the
         indexes or the study_params.
         """
-        if cls.indexes is not None and cls.study_params is not None:
-            df = df[cls.indexes + cls.study_params]
-        if cls.indexes is not None:
-            return cls(data=df.set_index(cls.indexes), **kwargs)
-        else:
-            return cls(data=df, **kwargs)
+        return cls(data=df, **kwargs)
 
     @classmethod
     def from_csv(cls, path: str, **kwargs) -> 'Study':
@@ -70,31 +65,6 @@ class CovidCountryStudy(Study):
     downsampling: int = 7
     groupby_data: GroupbyMixin = CovidCountryStudyGroupby
 
-    # Indexes
-    indexes: list = field(
-        default_factory=lambda: ['date', 'administrative_area_level_1'])
-
-    # Parameters
-    covid_params: list = field(
-        default_factory=lambda: ['confirmed', 'deaths', 'recovered'])
-    protection_params: list = field(
-        default_factory=lambda:
-        ['tests', 'vaccines', 'people_vaccinated', 'people_fully_vaccinated'])
-    health_sys_params: list = field(
-        default_factory=lambda: ['hosp', 'icu', 'vent'])
-    policy_params: list = field(default_factory=lambda: [
-        'school_closing', 'workplace_closing', 'cancel_events',
-        'gatherings_restrictions', 'transport_closing',
-        'stay_home_restrictions', 'internal_movement_restrictions',
-        'international_movement_restrictions', 'information_campaigns',
-        'testing_policy', 'contact_tracing', 'facial_coverings',
-        'vaccination_policy', 'elderly_people_protection'
-    ])
-    index_params: list = field(default_factory=lambda: [
-        'government_response_index', 'stringency_index',
-        'containment_health_index', 'economic_support_index'
-    ])
-
     # country_params: list = field(default_factory=lambda: ['latitude', 'longitude', 'population']) They are in `locations`, just ignore them
 
     # Plotting
@@ -111,6 +81,28 @@ class CovidCountryStudy(Study):
 
         super().__post_init__()
 
+        # Indexes
+        self.indexes = ['date', 'administrative_area_level_1']
+
+        # Parameters
+        self.covid_params = ['confirmed', 'deaths', 'recovered']
+        self.protection_params = [
+            'tests', 'vaccines', 'people_vaccinated', 'people_fully_vaccinated'
+        ]
+        self.health_sys_params = ['hosp', 'icu', 'vent']
+        self.policy_params = [
+            'school_closing', 'workplace_closing', 'cancel_events',
+            'gatherings_restrictions', 'transport_closing',
+            'stay_home_restrictions', 'internal_movement_restrictions',
+            'international_movement_restrictions', 'information_campaigns',
+            'testing_policy', 'contact_tracing', 'facial_coverings',
+            'vaccination_policy', 'elderly_people_protection'
+        ]
+        self.index_params = [
+            'government_response_index', 'stringency_index',
+            'containment_health_index', 'economic_support_index'
+        ]
+
         # Parameters
         self.study_groups = [
             self.covid_params, self.protection_params, self.health_sys_params,
@@ -119,6 +111,12 @@ class CovidCountryStudy(Study):
         self.study_params = [
             elem for group in self.study_groups for elem in group
         ]
+
+        # Drop non relevant columns & set index
+        if self.indexes is not None and self.study_params is not None:
+            self.data = self.data[self.indexes + self.study_params]
+        if self.indexes is not None:
+            self.data = self.data.set_index(self.indexes)
 
         # Plotting
         # --params
