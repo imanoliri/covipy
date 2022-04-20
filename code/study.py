@@ -9,6 +9,7 @@ import pandas as pd
 from typing import List, Tuple
 import matplotlib.pylab as plt
 import seaborn as sns
+from groupby import CovidCountryStudyGroupby, GroupbyMixin
 
 
 @dataclass
@@ -18,7 +19,17 @@ class Study():
     """
 
     data: pd.DataFrame
+    groupby_data: GroupbyMixin
+
+    # data parameters
+    downsampling: int = 1
     indexes: list = None
+    study_params: list = None
+
+    def __post_init__(self):
+
+        if self.downsampling != 1:
+            self.data = self.data.iloc[::self.downsampling]
 
     def plot(self) -> List[Axes]:
         """
@@ -30,29 +41,38 @@ class Study():
         pass
 
     @classmethod
-    def from_df(cls, df: pd.DataFrame) -> 'Study':
+    def from_df(cls, df: pd.DataFrame, **kwargs) -> 'Study':
         """
-        Create instance from given DataFrame.
+        Create instance from given DataFrame. Deletes columns that aren't either the
+        indexes or the study_params.
         """
+        if cls.indexes is not None and cls.study_params is not None:
+            df = df[cls.indexes + cls.study_params]
         if cls.indexes is not None:
-            return cls(data=df.set_index(cls.indexes))
+            return cls(data=df.set_index(cls.indexes), **kwargs)
         else:
-            return cls(data=df)
+            return cls(data=df, **kwargs)
 
     @classmethod
-    def from_csv(cls, path: str) -> 'Study':
+    def from_csv(cls, path: str, **kwargs) -> 'Study':
         """
         Create instance from given path.
         """
-        return cls.from_df(pd.read_csv(path))
+        return cls.from_df(pd.read_csv(path), **kwargs)
 
 
 @dataclass
 class CovidCountryStudy(Study):
+    """
+    Study of the covid pandemic by country.
+    """
+
+    downsampling: int = 7
+    groupby_data: GroupbyMixin = CovidCountryStudyGroupby
 
     # Indexes
     indexes: list = field(
-        default_factory=lambda: ['id', 'date', 'administrative_area_level_1'])
+        default_factory=lambda: ['date', 'administrative_area_level_1'])
 
     # Parameters
     covid_params: list = field(
@@ -88,6 +108,8 @@ class CovidCountryStudy(Study):
     corr_plots: bool = False
 
     def __post_init__(self):
+
+        super().__post_init__()
 
         # Parameters
         self.study_groups = [
