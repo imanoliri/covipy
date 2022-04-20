@@ -4,6 +4,12 @@ import sys
 
 sys.path.append('./..')
 sys.path.append('./../code')
+
+#%%
+# Setup
+from IPython.core.interactiveshell import InteractiveShell
+
+InteractiveShell.ast_node_interactivity = "all"
 #%% [markdown]
 # # Analysis by country
 #
@@ -14,27 +20,33 @@ from study import CovidCountryStudy
 st = CovidCountryStudy.from_csv('./../data/timeseries_by_country.csv')
 st_gb = CovidCountryStudyGroupby.from_data(
     data=st.data,
-    standard_parameter_groupbys=[(max, 'icu'), (mean, 'icu')],
+    standard_parameter_groupbys=[(max, 'icu'), (mean, 'icu'), (max, 'deaths')],
     located_parameter_groupbys=[('vaccination_rate', max, 'icu'),
                                 ('tests', max, 'confirmed'),
                                 ('deaths', max, 'confirmed'),
                                 ('confirmed', max, 'deaths'),
-                                ('deaths', max, 'elderly_people_protection'),
                                 ('elderly_people_protection', max, 'deaths')])
 
-#%%
-st_gb.data['nr_not_nans'] = [
-    sum((val is not float('Nan') and val is not None for val in vals))
-    for vals in st_gb.data.itertuples(index=False)
-]
 # %%
-st_gb.data.nr_not_nans.max()
-st_gb.data.nr_not_nans.min()
+import matplotlib.pylab as plt
+import pandas as pd
+import numpy as np
+for col in st_gb.data.columns:
+    try:
+        plt.figure()
+        xy_values = np.array(
+            [[x, y]
+             for (x, y) in zip(st_gb.data.index.values, st_gb.data[col].values)
+             if not pd.isnull(x) and not pd.isnull(y)],
+            dtype='object')
 
-# %%
-st.downsampling
+        df_to_plot = pd.DataFrame(xy_values[:, 1],
+                                  columns=[col],
+                                  index=xy_values[:, 0]).T
+        df_to_plot.plot(title=col, kind='bar')
+        plt.show()
 
-# %%
-len(st.data)
+    except:
+        pass
 
 # %%
