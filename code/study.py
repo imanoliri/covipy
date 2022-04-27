@@ -2,14 +2,15 @@
 This module contains the Study class that allows to analyze a given dataset.
 """
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from matplotlib.axes import Axes
 from itertools import product
 import pandas as pd
 from typing import List, Tuple
 import matplotlib.pylab as plt
 import seaborn as sns
-from groupby import CovidCountryStudyGroupby, GroupbyMixin
+from groupby import CovidCountryStudyGroupby
+import numpy as np
 
 
 @dataclass
@@ -19,7 +20,6 @@ class Study():
     """
 
     data: pd.DataFrame
-    groupby_data: GroupbyMixin
 
     # data parameters
     downsampling: int = 1
@@ -63,7 +63,6 @@ class CovidCountryStudy(Study):
     """
 
     downsampling: int = 7
-    groupby_data: GroupbyMixin = CovidCountryStudyGroupby
 
     # country_params: list = field(default_factory=lambda: ['latitude', 'longitude', 'population']) They are in `locations`, just ignore them
 
@@ -207,3 +206,61 @@ class CovidCountryStudy(Study):
         plot_axes += self.plot_relationships()
 
         return plot_axes
+
+
+class CovidByCountryStudy(Study):
+    """
+    Grouped data from an ObjectDataset object.
+    """
+    data: CovidCountryStudyGroupby
+
+    def plot_parameters(self) -> List[Axes]:
+        """
+        Plots regarding the parameters themselves.
+        """
+
+        print("Plot parameter values.")
+
+        param_axes = []
+        for col in self.data.columns:
+            plt.figure()
+            xy_values = np.array(
+                [[x, y]
+                 for (x,
+                      y) in zip(self.data.index.values, self.data[col].values)
+                 if not pd.isnull(x) and not pd.isnull(y)],
+                dtype='object')
+
+            if xy_values.size != 0:
+                df_to_plot = pd.DataFrame(xy_values[:, 1],
+                                          columns=[col],
+                                          index=xy_values[:, 0]).T
+                ax = df_to_plot.plot(title=col, kind='bar')
+                param_axes.append(ax)
+
+            plt.show()
+
+        return param_axes
+
+    def plot(self) -> List[Axes]:
+        """
+        Plots the necessary
+        """
+
+        plot_axes = []
+
+        plot_axes += self.plot_parameters()
+
+        return plot_axes
+
+    @classmethod
+    def from_df(cls, df: pd.DataFrame, study_kwargs: dict,
+                groupby_kwargs: dict) -> 'CovidByCountryStudy':
+        """
+        This methods creates a new instance of `ObjectPairDatasetGroupby` from the 'pair_dataset'
+        given and extracting and adding extra data from it. Which parameters to be extracted can be
+        input as keyword arguments and will be saved as attributes of the instance.
+        """
+        return Study.from_df(df=CovidCountryStudyGroupby.from_df(
+            df, **groupby_kwargs),
+                             **study_kwargs)
