@@ -51,7 +51,7 @@ for country in set(st.data.index.get_level_values(1)):
 #%%
 from groupby import CovidCountryStudyGroupby
 
-st_gb = CovidCountryStudyGroupby.from_data(
+st_gb = CovidCountryStudyGroupby.from_df(
     data=st.data,
     standard_parameter_groupbys=[(max, 'icu'), (mean, 'icu'), (max, 'deaths')],
     located_parameter_groupbys=[('vaccination_rate', max, 'icu'),

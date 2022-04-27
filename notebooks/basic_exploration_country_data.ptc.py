@@ -24,8 +24,6 @@ st = CovidCountryStudy.from_csv('./../data/timeseries_by_country.csv',
                                 downsampling=7)
 df = st.data
 
-#%%
-df = df[st.study_params]
 #%% [markdown]
 # ### General
 #%%

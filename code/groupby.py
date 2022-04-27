@@ -162,7 +162,7 @@ class GroupbyMixin(ABC):
         return pd.Series(data=[value], index=[column_name])
 
     @classmethod
-    def from_data(cls, data: pd.DataFrame, **kwargs):
+    def from_df(cls, data: pd.DataFrame, **kwargs):
         """
         This methods creates a new instance of `ObjectPairDatasetGroupby` from the 'pair_dataset'
         given and extracting and adding extra data from it. Which parameters to be extracted can be
