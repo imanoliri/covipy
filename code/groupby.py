@@ -2,7 +2,6 @@
 This module contains the features regarding the grouping and aggregation of data.
 """
 import inspect
-
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from typing import Callable, List, Tuple
