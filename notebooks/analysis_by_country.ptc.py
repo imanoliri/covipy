@@ -26,12 +26,20 @@ st_gb = CovidByCountryStudy.from_csv(
     path='./../data/timeseries_by_country.csv',
     study_kwargs={"downsampling": 7},
     groupby_kwargs={
-        "standard_parameter_groupbys": [(max, 'icu'), (mean, 'icu'),
-                                        (max, 'deaths')],
+        "standard_parameter_groupbys":
+        [(max, ('health_system', 'status', 'icu')),
+         (mean, ('health_system', 'status', 'icu')),
+         (max, ('covid', 'status', 'deaths'))],
         "located_parameter_groupbys":
-        [('vaccination_rate', max, 'icu'), ('tests', max, 'confirmed'),
-         ('deaths', max, 'confirmed'), ('confirmed', max, 'deaths'),
-         ('elderly_people_protection', max, 'deaths')]
+        [(('covid', 'protection', 'people_fully_vaccinated'), max,
+          ('health_system', 'status', 'icu')),
+         ('tests', max, ('covid', 'status', 'confirmed')),
+         (('covid', 'status', 'deaths'), max, ('covid', 'status',
+                                               'confirmed')),
+         (('covid', 'status', 'confirmed'), max, ('covid', 'status',
+                                                  'deaths')),
+         (('policy', 'protection', 'elderly_people_protection'), max,
+          ('covid', 'status', 'deaths'))]
     })
 #%%
 st_gb.plot()

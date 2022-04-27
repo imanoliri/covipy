@@ -67,17 +67,25 @@ class CovidCountryStudy(CovidStudyMixin, PlotStudyMixin, Study):
 
     # Plotting
     plot_parameters: bool = True
-    pair_plots: bool = True
+    plot_correlation_plots: bool = True
 
     def __post_init__(self):
 
         super().__post_init__()
 
         # Plotting
-        self.rel_groups_to_study = [self.covid_params]
-        self.rel_groups_to_pair_with = [
-            self.protection_params, self.health_sys_params, self.policy_params,
-            self.index_params
+        infection_correlations = (('covid', 'status', 'confirmed'), [
+            ('policy', 'protection', 'facial_coverings'),
+            ('policy', 'movement_restrictions',
+             'international_movement_restrictions'),
+            ('policy', 'social_distance', 'stay_home_restrictions')
+        ])
+        death_correlations = (('covid', 'status', 'deaths'), [
+            ('policy', 'protection', 'elderly_people_protection'),
+            ('policy', 'protection', 'vaccination_policy')
+        ])
+        self.correlation_parameters = [
+            infection_correlations, death_correlations
         ]
 
     @property

@@ -3,13 +3,15 @@ This module contains the plotting methods and can be inherited using the PlotStu
 """
 
 from dataclasses import dataclass
-from typing import List
+from typing import List, Tuple
 
 import matplotlib.pylab as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
 from matplotlib.axes import Axes
+
+Column = Tuple[str]
 
 
 @dataclass
@@ -26,10 +28,8 @@ class PlotStudyMixin():
     plot_kwargs: dict = None
 
     # --relationships
-    plot_pair_plots: bool = False
-    plot_corr_plots: bool = False
-    rel_groups_to_study: List[str] = None
-    rel_groups_to_pair_with: List[List[str]] = None
+    plot_correlation_plots: bool = False
+    correlation_parameters: List[Tuple[Column, List[Column]]] = None
 
     # --params by country
     plot_parameters_by_country: bool = False
@@ -67,10 +67,12 @@ class PlotStudyMixin():
                     self.data[col].plot(title=f'Value distribution for: {col}',
                                         ax=axs[c],
                                         **self.plot_kwargs)
+                    plt.plot()
                 except:
                     plt.plot(title=f'EMPTY distribution for: {col}')
 
             plot_axes.append(axs)
+            plt.show()
 
         return plot_axes
 
@@ -82,26 +84,15 @@ class PlotStudyMixin():
         print("Plot parameter relationships.")
 
         rel_axes = []
-        for params_to_study, params_to_pair_with in self.group_pairs:
-            print(f'Relate:\n\t- {params_to_study}\n\t- {params_to_pair_with}')
-            try:
-                df_current = self.data[params_to_study + params_to_pair_with]
-            except:
-                continue
+        for param, params_to_correlate_with in self.correlation_parameters:
+            print(f'Correlate:\n\t- {param}\n\t- {params_to_correlate_with}')
+            df_current = self.data.loc[:, [param] + params_to_correlate_with]
 
-            if self.plot_pair_plots:
-                try:
-                    rel_axes.append(sns.pairplot(df_current))
-                    plt.show()
-                except:
-                    pass
-
-            if self.plot_corr_plots:
-                try:
-                    df_corr_current = df_current.dropna().corr()
-                    rel_axes.append(sns.heatmap(df_corr_current, annot=True))
-                except:
-                    pass
+            rel_axes.append(
+                sns.pairplot(df_current,
+                             x_vars=[param],
+                             y_vars=params_to_correlate_with))
+            plt.show()
 
         return rel_axes
 
@@ -178,7 +169,7 @@ class PlotStudyMixin():
         if self.plot_parameters:
             plot_axes += self.parameter_plots()
 
-        if self.plot_pair_plots or self.plot_corr_plots:
+        if self.plot_correlation_plots:
             plot_axes += self.relationship_plots()
 
         if self.plot_parameters_by_country:
