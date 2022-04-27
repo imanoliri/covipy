@@ -36,7 +36,7 @@ df.info()
 df.head(10)
 #%%
 df.describe()
-#%% [markdown]
+#%%
 st.plot()
 
 #%%

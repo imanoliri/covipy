@@ -19,7 +19,7 @@ class Study():
     The concrete analysis of the dataset found in the `data` attribute.
     """
 
-    data: pd.DataFrame
+    data: pd.DataFrame = None
 
     # data parameters
     downsampling: int = 1
@@ -142,7 +142,7 @@ class CovidCountryStudy(Study):
 
         print("Plot parameter distributions.")
 
-        param_axes = []
+        plot_axes = []
 
         for group in self.study_groups:
             num_subplots = len(group)
@@ -159,9 +159,9 @@ class CovidCountryStudy(Study):
                 except:
                     plt.plot(title=f'EMPTY distribution for: {col}')
 
-            param_axes.append(axs)
+            plot_axes.append(axs)
 
-        return param_axes
+        return plot_axes
 
     def plot_relationships(self) -> List[Axes]:
         """
@@ -208,20 +208,61 @@ class CovidCountryStudy(Study):
         return plot_axes
 
 
+@dataclass
 class CovidByCountryStudy(Study):
     """
     Grouped data from an ObjectDataset object.
     """
-    data: CovidCountryStudyGroupby
 
-    def plot_parameters(self) -> List[Axes]:
+    groupby_data: CovidCountryStudyGroupby = None
+    min_datapoints_in_country: int = 20
+
+    def __post_init__(self):
+        return super().__post_init__()
+
+    def plot_parameters_by_country(self) -> List[Axes]:
+        """
+        Plot the parameters of each country.
+        """
+
+        print("Plot parameters for each country.")
+
+        plot_axes = []
+        param_groups_vs_time = self.study_groups
+        for country in set(self.data.index.get_level_values(1)):
+            for param_group in param_groups_vs_time:
+                # Get df only for country, the group of parameters and remove index level for the country
+                df_to_plot = self.data.loc[
+                    self.data.index.get_level_values(1) == country,
+                    param_group].reset_index(
+                        'administrative_area_level_1').drop(
+                            columns=['administrative_area_level_1'])
+
+                # Skip if empty, all values are null or not minimum data points
+                if df_to_plot.empty:
+                    continue
+                if df_to_plot.isnull().values.all():
+                    continue
+                if len(df_to_plot) < self.min_datapoints_in_country:
+                    continue
+
+                # Plot
+                plt.figure()
+                ax = df_to_plot.plot(title=country)
+                plt.show()
+
+                plot_axes.append(ax)
+
+        return plot_axes
+
+    def plot_groupby_parameters(self) -> List[Axes]:
         """
         Plots regarding the parameters themselves.
         """
 
-        print("Plot parameter values.")
+        print("Plot parameters from groupby.")
 
-        param_axes = []
+        plot_axes = []
         for col in self.data.columns:
             plt.figure()
             xy_values = np.array(
@@ -236,20 +277,22 @@ class CovidByCountryStudy(Study):
                                           columns=[col],
                                           index=xy_values[:, 0]).T
                 ax = df_to_plot.plot(title=col, kind='bar')
-                param_axes.append(ax)
+                plot_axes.append(ax)
 
             plt.show()
 
-        return param_axes
+        return plot_axes
 
     def plot(self) -> List[Axes]:
         """
-        Plots the necessary
+        Plots.
         """
 
         plot_axes = []
 
-        plot_axes += self.plot_parameters()
+        plot_axes += self.plot_parameters_by_country()
+
+        plot_axes += self.plot_groupby_parameters()
 
         return plot_axes
 
@@ -261,6 +304,14 @@ class CovidByCountryStudy(Study):
         given and extracting and adding extra data from it. Which parameters to be extracted can be
         input as keyword arguments and will be saved as attributes of the instance.
         """
-        return Study.from_df(df=CovidCountryStudyGroupby.from_df(
-            df, **groupby_kwargs),
-                             **study_kwargs)
+        return cls(data=df,
+                   groupby_data=CovidCountryStudyGroupby.from_df(
+                       df, **groupby_kwargs),
+                   **study_kwargs)
+
+    @classmethod
+    def from_csv(cls, path: str, **kwargs) -> 'CovidByCountryStudy':
+        """
+        Create instance from given path.
+        """
+        return cls.from_df(pd.read_csv(path), **kwargs)
