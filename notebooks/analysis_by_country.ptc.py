@@ -50,15 +50,18 @@ for country in set(st.data.index.get_level_values(1)):
 # Create CovidCountryStudyGroupby with interesting data aggregations & localizations
 #%%
 from groupby import CovidCountryStudyGroupby
+from study import CovidByCountryStudy
 
-st_gb = CovidCountryStudyGroupby.from_df(
-    data=st.data,
+gb = CovidCountryStudyGroupby.from_df(
+    df=st.data,
     standard_parameter_groupbys=[(max, 'icu'), (mean, 'icu'), (max, 'deaths')],
     located_parameter_groupbys=[('vaccination_rate', max, 'icu'),
                                 ('tests', max, 'confirmed'),
                                 ('deaths', max, 'confirmed'),
                                 ('confirmed', max, 'deaths'),
                                 ('elderly_people_protection', max, 'deaths')])
+
+st_gb = CovidByCountryStudy(data=gb)
 #%%
 st_gb.plot()
 
