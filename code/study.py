@@ -11,6 +11,7 @@ import matplotlib.pylab as plt
 import seaborn as sns
 from groupby import CovidCountryStudyGroupby
 import numpy as np
+from covid import CovidStudyMixin
 
 
 @dataclass
@@ -57,7 +58,7 @@ class Study():
 
 
 @dataclass
-class CovidCountryStudy(Study):
+class CovidCountryStudy(CovidStudyMixin, Study):
     """
     Study of the covid pandemic by country.
     """
@@ -79,43 +80,6 @@ class CovidCountryStudy(Study):
     def __post_init__(self):
 
         super().__post_init__()
-
-        # Indexes
-        self.indexes = ['date', 'administrative_area_level_1']
-
-        # Parameters
-        self.covid_params = ['confirmed', 'deaths', 'recovered']
-        self.protection_params = [
-            'tests', 'vaccines', 'people_vaccinated', 'people_fully_vaccinated'
-        ]
-        self.health_sys_params = ['hosp', 'icu', 'vent']
-        self.policy_params = [
-            'school_closing', 'workplace_closing', 'cancel_events',
-            'gatherings_restrictions', 'transport_closing',
-            'stay_home_restrictions', 'internal_movement_restrictions',
-            'international_movement_restrictions', 'information_campaigns',
-            'testing_policy', 'contact_tracing', 'facial_coverings',
-            'vaccination_policy', 'elderly_people_protection'
-        ]
-        self.index_params = [
-            'government_response_index', 'stringency_index',
-            'containment_health_index', 'economic_support_index'
-        ]
-
-        # Parameters
-        self.study_groups = [
-            self.covid_params, self.protection_params, self.health_sys_params,
-            self.policy_params, self.index_params
-        ]
-        self.study_params = [
-            elem for group in self.study_groups for elem in group
-        ]
-
-        # Drop non relevant columns & set index
-        if self.indexes is not None and self.study_params is not None:
-            self.data = self.data[self.indexes + self.study_params]
-        if self.indexes is not None:
-            self.data = self.data.set_index(self.indexes)
 
         # Plotting
         # --params
@@ -209,7 +173,7 @@ class CovidCountryStudy(Study):
 
 
 @dataclass
-class CovidByCountryStudy(Study):
+class CovidByCountryStudy(CovidStudyMixin, Study):
     """
     Grouped data from an ObjectDataset object.
     """
