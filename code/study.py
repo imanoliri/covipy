@@ -80,10 +80,8 @@ class CovidCountryStudy(CovidStudyMixin, PlotStudyMixin, Study):
              'international_movement_restrictions'),
             ('policy', 'social_distance', 'stay_home_restrictions')
         ])
-        death_correlations = (('covid', 'status', 'deaths'), [
-            ('policy', 'protection', 'elderly_people_protection'),
-            ('policy', 'protection', 'vaccination_policy')
-        ])
+        death_correlations = (('covid', 'status', 'deaths'), [('policy',
+                                                               'protection')])
         self.correlation_parameters = [
             infection_correlations, death_correlations
         ]
