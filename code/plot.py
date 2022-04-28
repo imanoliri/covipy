@@ -47,7 +47,7 @@ class PlotStudyMixin():
             self.plot_kwargs = {"bins": 20, **self.plot_kwargs}
 
     @staticmethod
-    def all_columns_for_partial(df: pd.DataFrame, partial_column: Column,
+    def all_columns_for_partial(partial_column: Column, df: pd.DataFrame,
                                 depth_of_columns: int) -> List[Column]:
         """
         Gets all columns in the dataframe related to the partial column.
@@ -62,18 +62,11 @@ class PlotStudyMixin():
 
         return df.loc[:, slicer].columns.tolist()
 
-    def complete_column(self, df: pd.DataFrame,
-                        partial_column: Column) -> Union[Column, List[Column]]:
+    def complete_column(self, partial_column: Column,
+                        df: pd.DataFrame) -> Union[Column, List[Column]]:
         """
         If a partial column is passed, a list of all the subcolumns is returned.
         Else it's left as is.
-
-        Args:
-            df (pd.DataFrame): Dataframe to 
-            partial_column (Column): _description_
-
-        Returns:
-            Union[Column, List[Column]]: _description_
         """
         depth_of_columns = 1
         if isinstance(df.columns, pd.MultiIndex):
@@ -83,19 +76,35 @@ class PlotStudyMixin():
                       tuple) and len(partial_column) == depth_of_columns:
             return partial_column
 
-        return self.all_columns_for_partial(self.data, partial_column,
+        return self.all_columns_for_partial(partial_column, self.data,
                                             depth_of_columns)
 
-    def complete_columns(self, df: pd.DataFrame,
-                         columns: List[Column]) -> List[Column]:
+    def complete_columns(self, columns: List[Column],
+                         df: pd.DataFrame) -> List[Column]:
         """
         Substitute any partial columns in the list by their related columns in the dataframe.
         """
         nested_columns = [[elem] if not isinstance(elem, list) else elem
-                          for elem in (self.complete_column(df, corr_param)
-                                       for corr_param in columns)]
+                          for elem in (self.complete_column(col, df)
+                                       for col in columns)]
 
         return [e for elem in nested_columns for e in elem]
+
+    def prepare_columns(self, columns: List[Column],
+                        df: pd.DataFrame) -> List[Column]:
+        """
+        Prepares all the columns in the list of lists of columns.
+
+        Args:
+            columns (List[Column]): List of of columns to prepare.
+            df (pd.DataFrame): Dataframe used to complete missing levels in columns.
+
+        Returns:
+            List[List[Column]]: Prepared list of columns.
+        """
+        if not isinstance(columns, list):
+            columns = [columns]
+        return self.complete_columns(columns, df)
 
     def parameter_plots(self) -> List[Axes]:
         """
@@ -139,10 +148,9 @@ class PlotStudyMixin():
             print(f'Correlate:\n\t- {params}\n\t- {params_to_correlate_with}')
 
             # Prepare column arguments
-            if not isinstance(params, list):
-                params = [params]
-            params_to_correlate_with = self.complete_columns(
-                self.data, params_to_correlate_with)
+            params = self.prepare_columns(params, self.data)
+            params_to_correlate_with = self.prepare_columns(
+                params_to_correlate_with, self.data)
 
             df_current = self.data.loc[:, params + params_to_correlate_with]
 
