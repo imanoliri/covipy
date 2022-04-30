@@ -205,12 +205,11 @@ class PlotStudyMixin():
         print("Plot parameters from groupby.")
 
         plot_axes = []
-        for col in self.data.columns:
+        data = self.groupby_data.data
+        for col in data.columns:
             plt.figure()
             xy_values = np.array(
-                [[x, y]
-                 for (x,
-                      y) in zip(self.data.index.values, self.data[col].values)
+                [[x, y] for (x, y) in zip(data.index.values, data[col].values)
                  if not pd.isnull(x) and not pd.isnull(y)],
                 dtype='object')
 

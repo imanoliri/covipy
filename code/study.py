@@ -99,7 +99,7 @@ class CovidByCountryStudy(CovidStudyMixin, PlotStudyMixin, Study):
     """
 
     groupby_data: CovidCountryStudyGroupby = None
-    min_datapoints_in_country: int = 20
+    min_datapoints_in_country: int = 10
 
     # Plotting
     plot_parameters_by_country: bool = True
