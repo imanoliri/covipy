@@ -77,11 +77,20 @@ class CovidStudyMixin():
 
         # Drop non relevant columns, set to multiindex & set index
         if self.indexes is not None and self.study_params is not None:
-            self.data = self.data[
-                self.indexes +
-                self.study_params.get_level_values(-1).to_list()]
+            columns_to_keep = [
+                col for col in self.indexes +
+                self.study_params.get_level_values(-1).to_list()
+                if col in self.data.columns
+            ]
+            if columns_to_keep:
+                self.data = self.data[columns_to_keep]
         if self.indexes is not None:
-            self.data = self.data.set_index(self.indexes)
+            indexes_to_set = [
+                col for col in self.indexes
+                if col in self.data.columns
+            ]
+            if indexes_to_set:
+                self.data = self.data.set_index(self.indexes)
 
         if self.study_params is not None:
             self.data.columns = self.study_params

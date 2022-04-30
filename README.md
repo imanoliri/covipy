@@ -7,3 +7,5 @@ Data is in the compressed `data.zip` file. You should extract it before executin
 From:
   - https://covid19datahub.io/
 
+
+See `notebooks/data_description.ipynb` for more information about the contents of data.
