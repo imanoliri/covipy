@@ -109,17 +109,32 @@ class CovidByCountryStudy(CovidStudyMixin, PlotStudyMixin, Study):
         return super().__post_init__()
 
     @classmethod
-    def from_df(cls, df: pd.DataFrame, study_kwargs: dict,
-                groupby_kwargs: dict) -> 'CovidByCountryStudy':
+    def from_study(cls, st: Study, study_kwargs: dict,
+                   groupby_kwargs: dict) -> 'CovidByCountryStudy':
         """
         This methods creates a new instance of `ObjectPairDatasetGroupby` from the 'pair_dataset'
         given and extracting and adding extra data from it. Which parameters to be extracted can be
         input as keyword arguments and will be saved as attributes of the instance.
         """
-        return cls(data=df,
+        return cls(data=st.data,
                    groupby_data=CovidCountryStudyGroupby.from_df(
-                       df, **groupby_kwargs),
+                       st.data, **groupby_kwargs),
                    **study_kwargs)
+
+    @classmethod
+    def from_df(cls,
+                df: pd.DataFrame,
+                covid_study_kwargs: dict = None,
+                **kwargs) -> 'CovidByCountryStudy':
+        """
+        This methods creates a new instance of `ObjectPairDatasetGroupby` from the 'pair_dataset'
+        given and extracting and adding extra data from it. Which parameters to be extracted can be
+        input as keyword arguments and will be saved as attributes of the instance.
+        """
+        if covid_study_kwargs is None:
+            covid_study_kwargs = {}
+        st = CovidCountryStudy.from_df(df, **covid_study_kwargs)
+        return cls.from_study(st, **kwargs)
 
     @classmethod
     def from_csv(cls, path: str, **kwargs) -> 'CovidByCountryStudy':
