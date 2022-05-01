@@ -109,21 +109,19 @@ class CovidByCountryStudy(CovidStudyMixin, PlotStudyMixin, Study):
     @classmethod
     def from_study(cls,
                    study: Study,
-                   study_kwargs: dict = None,
-                   groupby_kwargs: dict = None) -> 'CovidByCountryStudy':
+                   groupby_kwargs: dict = None,
+                   **kwargs) -> 'CovidByCountryStudy':
         """
         This methods creates a new instance of `ObjectPairDatasetGroupby` from the 'pair_dataset'
         given and extracting and adding extra data from it. Which parameters to be extracted can be
         input as keyword arguments and will be saved as attributes of the instance.
         """
-        if study_kwargs is None:
-            study_kwargs = {}
         if groupby_kwargs is None:
             groupby_kwargs = {}
         return cls(data=study.data,
                    groupby_data=CovidCountryStudyGroupby.from_df(
                        study.data, **groupby_kwargs),
-                   **study_kwargs)
+                   **kwargs)
 
     @classmethod
     def from_df(cls,
