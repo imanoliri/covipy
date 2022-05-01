@@ -6,6 +6,7 @@ from dataclasses import dataclass
 import pandas as pd
 from itertools import product
 from typing import List, Tuple
+import numpy as np
 
 Column = Tuple[str]
 
@@ -16,12 +17,20 @@ class CovidStudyMixin():
     This class contains information about the covid itself.
     """
 
+    country_data: pd.DataFrame = None
+    country_filter: dict = None
+    countries_to_study: List[str] = None
+
     def __post_init__(self):
 
         super().__post_init__()
 
         # Indexes
         self.indexes = ['date', 'administrative_area_level_1']
+
+        # Country data
+        self.set_countries_to_study()
+        self.filter_countries()
 
         # Fix columns and indexes
         self.filter_columns()
@@ -183,3 +192,53 @@ class CovidStudyMixin():
             return
 
         self.data.columns = self.study_params
+
+    def set_countries_to_study(self):
+        """
+        This method ensures that the countries to study are set correctly.
+        If it's not defined but country_data and country_filter are, they are inferred.
+        """
+
+        if isinstance(self.countries_to_study, list):
+            """Correctly defined. Skip"""
+            return
+
+        if self.country_data is None or self.country_filter is None:
+            print("Couldn't set_countries_to_study, because it's not a dict!")
+            return
+
+        if not isinstance(self.country_filter, dict):
+            print(
+                "Couldn't set_countries_to_study, because country_filter is not a dict!"
+            )
+            return
+
+        df = self.country_data
+        mask = np.full((len(df)), False)
+        for col, vals in self.country_filter.items():
+            mask = np.logical_or(mask, [val in vals for val in df.loc[:, col]])
+
+        self.countries_to_study = df.loc[mask].index.tolist()
+
+    def filter_countries(self):
+        """
+        This method ensures that only the countries to study are in the data.
+        """
+        if self.countries_to_study is None:
+            return
+
+        country_header = self.indexes[1]
+        c_values = None
+        if country_header in self.data.columns:
+            c_values = self.data.loc[:, country_header]
+        elif self.data.index.names is not None:
+            if country_header in self.data.index.names:
+                c_values = self.data.index.get_level_values(country_header)
+
+        if c_values is None:
+            print(
+                "Couldn't filter by countries because the country column/index couldn't be found!"
+            )
+            return
+        mask_country = [c_id in self.countries_to_study for c_id in c_values]
+        self.data = self.data.loc[mask_country]

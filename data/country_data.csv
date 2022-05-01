@@ -1,250 +1,250 @@
- id	Country	Code	Continent	Region 1	Region2
-1	Afghanistan	AFG	Asia	Southern Asia	
-2	�land Islands	ALA	Europe	Northern Europe	
-3	Albania	ALB	Europe	Southern Europe	
-4	Algeria	DZA	Africa	Northern Africa	
-5	American Samoa	ASM	Oceania	Polynesia	
-6	Andorra	AND	Europe	Southern Europe	
-7	Angola	AGO	Africa	Middle Africa	Sub-Saharan Africa
-8	Anguilla	AIA	North America	Caribbean	Latin America and the Caribbean
-9	Antarctica	ATA	Antarctica	Antarctica	
-10	Antigua and Barbuda	ATG	North America	Caribbean	Latin America and the Caribbean
-11	Argentina	ARG	South America	South America	Latin America and the Caribbean
-12	Armenia	ARM	Asia	Western Asia	
-13	Aruba	ABW	North America	Caribbean	Latin America and the Caribbean
-14	Australia	AUS	Oceania	Australia and New Zealand	
-15	Austria	AUT	Europe	Western Europe	
-16	Azerbaijan	AZE	Asia	Western Asia	
-17	Bahamas	BHS	North America	Caribbean	Latin America and the Caribbean
-18	Bahrain	BHR	Asia	Western Asia	
-19	Bangladesh	BGD	Asia	Southern Asia	
-20	Barbados	BRB	North America	Caribbean	Latin America and the Caribbean
-21	Belarus	BLR	Europe	Eastern Europe	
-22	Belgium	BEL	Europe	Western Europe	
-23	Belize	BLZ	North America	Central America	Latin America and the Caribbean
-24	Benin	BEN	Africa	Western Africa	Sub-Saharan Africa
-25	Bermuda	BMU	North America	Northern America	
-26	Bhutan	BTN	Asia	Southern Asia	
-27	Bolivia (Plurinational State of)	BOL	South America	South America	Latin America and the Caribbean
-28	Bonaire, Sint Eustatius and Saba	BES	North America	Caribbean	Latin America and the Caribbean
-29	Bosnia and Herzegovina	BIH	Europe	Southern Europe	
-30	Botswana	BWA	Africa	Southern Africa	Sub-Saharan Africa
-31	Bouvet Island	BVT	South America	South America	Latin America and the Caribbean
-32	Brazil	BRA	South America	South America	Latin America and the Caribbean
-33	British Indian Ocean Territory	IOT	Africa	Eastern Africa	Sub-Saharan Africa
-34	British Virgin Islands	VGB	North America	Caribbean	Latin America and the Caribbean
-35	Brunei Darussalam	BRN	Asia	South-eastern Asia	
-36	Bulgaria	BGR	Europe	Eastern Europe	
-37	Burkina Faso	BFA	Africa	Western Africa	Sub-Saharan Africa
-38	Burundi	BDI	Africa	Eastern Africa	Sub-Saharan Africa
-39	Cabo Verde	CPV	Africa	Western Africa	Sub-Saharan Africa
-40	Cambodia	KHM	Asia	South-eastern Asia	
-41	Cameroon	CMR	Africa	Middle Africa	Sub-Saharan Africa
-42	Canada	CAN	North America	Northern America	
-43	Cayman Islands	CYM	North America	Caribbean	Latin America and the Caribbean
-44	Central African Republic	CAF	Africa	Middle Africa	Sub-Saharan Africa
-45	Chad	TCD	Africa	Middle Africa	Sub-Saharan Africa
-46	Chile	CHL	South America	South America	Latin America and the Caribbean
-47	China	CHN	Asia	Eastern Asia	
-48	China, Hong Kong Special Administrative Region	HKG	Asia	Eastern Asia	
-49	China, Macao Special Administrative Region	MAC	Asia	Eastern Asia	
-50	Christmas Island	CXR	Oceania	Australia and New Zealand	
-51	Cocos (Keeling) Islands	CCK	Oceania	Australia and New Zealand	
-52	Colombia	COL	South America	South America	Latin America and the Caribbean
-53	Comoros	COM	Africa	Eastern Africa	Sub-Saharan Africa
-54	Congo	COG	Africa	Middle Africa	Sub-Saharan Africa
-55	Cook Islands	COK	Oceania	Polynesia	
-56	Costa Rica	CRI	North America	Central America	Latin America and the Caribbean
-57	C�te d�Ivoire	CIV	Africa	Western Africa	Sub-Saharan Africa
-58	Croatia	HRV	Europe	Southern Europe	
-59	Cuba	CUB	North America	Caribbean	Latin America and the Caribbean
-60	Cura�ao	CUW	North America	Caribbean	Latin America and the Caribbean
-61	Cyprus	CYP	Asia	Western Asia	
-62	Czechia	CZE	Europe	Eastern Europe	
-63	Democratic People's Republic of Korea	PRK	Asia	Eastern Asia	
-64	Democratic Republic of the Congo	COD	Africa	Middle Africa	Sub-Saharan Africa
-65	Denmark	DNK	Europe	Northern Europe	
-66	Djibouti	DJI	Africa	Eastern Africa	Sub-Saharan Africa
-67	Dominica	DMA	North America	Caribbean	Latin America and the Caribbean
-68	Dominican Republic	DOM	North America	Caribbean	Latin America and the Caribbean
-69	Ecuador	ECU	South America	South America	Latin America and the Caribbean
-70	Egypt	EGY	Africa	Northern Africa	
-71	El Salvador	SLV	North America	Central America	Latin America and the Caribbean
-72	Equatorial Guinea	GNQ	Africa	Middle Africa	Sub-Saharan Africa
-73	Eritrea	ERI	Africa	Eastern Africa	Sub-Saharan Africa
-74	Estonia	EST	Europe	Northern Europe	
-75	Eswatini	SWZ	Africa	Southern Africa	Sub-Saharan Africa
-76	Ethiopia	ETH	Africa	Eastern Africa	Sub-Saharan Africa
-77	Falkland Islands (Malvinas)	FLK	South America	South America	Latin America and the Caribbean
-78	Faroe Islands	FRO	Europe	Northern Europe	
-79	Fiji	FJI	Oceania	Melanesia	
-80	Finland	FIN	Europe	Northern Europe	
-81	France	FRA	Europe	Western Europe	
-82	French Guiana	GUF	South America	South America	Latin America and the Caribbean
-83	French Polynesia	PYF	Oceania	Polynesia	
-84	French Southern Territories	ATF	Africa	Eastern Africa	Sub-Saharan Africa
-85	Gabon	GAB	Africa	Middle Africa	Sub-Saharan Africa
-86	Gambia	GMB	Africa	Western Africa	Sub-Saharan Africa
-87	Georgia	GEO	Asia	Western Asia	
-88	Germany	DEU	Europe	Western Europe	
-89	Ghana	GHA	Africa	Western Africa	Sub-Saharan Africa
-90	Gibraltar	GIB	Europe	Southern Europe	
-91	Greece	GRC	Europe	Southern Europe	
-92	Greenland	GRL	North America	Northern America	
-93	Grenada	GRD	North America	Caribbean	Latin America and the Caribbean
-94	Guadeloupe	GLP	North America	Caribbean	Latin America and the Caribbean
-95	Guam	GUM	Oceania	Micronesia	
-96	Guatemala	GTM	North America	Central America	Latin America and the Caribbean
-97	Guernsey	GGY	Europe	Northern Europe	Channel Islands
-98	Guinea	GIN	Africa	Western Africa	Sub-Saharan Africa
-99	Guinea-Bissau	GNB	Africa	Western Africa	Sub-Saharan Africa
-100	Guyana	GUY	South America	South America	Latin America and the Caribbean
-101	Haiti	HTI	North America	Caribbean	Latin America and the Caribbean
-102	Heard Island and McDonald Islands	HMD	Oceania	Australia and New Zealand	
-103	Holy See	VAT	Europe	Southern Europe	
-104	Honduras	HND	North America	Central America	Latin America and the Caribbean
-105	Hungary	HUN	Europe	Eastern Europe	
-106	Iceland	ISL	Europe	Northern Europe	
-107	India	IND	Asia	Southern Asia	
-108	Indonesia	IDN	Asia	South-eastern Asia	
-109	Iran (Islamic Republic of)	IRN	Asia	Southern Asia	
-110	Iraq	IRQ	Asia	Western Asia	
-111	Ireland	IRL	Europe	Northern Europe	
-112	Isle of Man	IMN	Europe	Northern Europe	
-113	Israel	ISR	Asia	Western Asia	
-114	Italy	ITA	Europe	Southern Europe	
-115	Jamaica	JAM	North America	Caribbean	Latin America and the Caribbean
-116	Japan	JPN	Asia	Eastern Asia	
-117	Jersey	JEY	Europe	Northern Europe	Channel Islands
-118	Jordan	JOR	Asia	Western Asia	
-119	Kazakhstan	KAZ	Asia	Central Asia	
-120	Kenya	KEN	Africa	Eastern Africa	Sub-Saharan Africa
-121	Kiribati	KIR	Oceania	Micronesia	
-122	Kuwait	KWT	Asia	Western Asia	
-123	Kyrgyzstan	KGZ	Asia	Central Asia	
-124	Lao People's Democratic Republic	LAO	Asia	South-eastern Asia	
-125	Latvia	LVA	Europe	Northern Europe	
-126	Lebanon	LBN	Asia	Western Asia	
-127	Lesotho	LSO	Africa	Southern Africa	Sub-Saharan Africa
-128	Liberia	LBR	Africa	Western Africa	Sub-Saharan Africa
-129	Libya	LBY	Africa	Northern Africa	
-130	Liechtenstein	LIE	Europe	Western Europe	
-131	Lithuania	LTU	Europe	Northern Europe	
-132	Luxembourg	LUX	Europe	Western Europe	
-133	Madagascar	MDG	Africa	Eastern Africa	Sub-Saharan Africa
-134	Malawi	MWI	Africa	Eastern Africa	Sub-Saharan Africa
-135	Malaysia	MYS	Asia	South-eastern Asia	
-136	Maldives	MDV	Asia	Southern Asia	
-137	Mali	MLI	Africa	Western Africa	Sub-Saharan Africa
-138	Malta	MLT	Europe	Southern Europe	
-139	Marshall Islands	MHL	Oceania	Micronesia	
-140	Martinique	MTQ	North America	Caribbean	Latin America and the Caribbean
-141	Mauritania	MRT	Africa	Western Africa	Sub-Saharan Africa
-142	Mauritius	MUS	Africa	Eastern Africa	Sub-Saharan Africa
-143	Mayotte	MYT	Africa	Eastern Africa	Sub-Saharan Africa
-144	Mexico	MEX	North America	Central America	Latin America and the Caribbean
-145	Micronesia (Federated States of)	FSM	Oceania	Micronesia	
-146	Monaco	MCO	Europe	Western Europe	
-147	Mongolia	MNG	Asia	Eastern Asia	
-148	Montenegro	MNE	Europe	Southern Europe	
-149	Montserrat	MSR	North America	Caribbean	Latin America and the Caribbean
-150	Morocco	MAR	Africa	Northern Africa	
-151	Mozambique	MOZ	Africa	Eastern Africa	Sub-Saharan Africa
-152	Myanmar	MMR	Asia	South-eastern Asia	
-153	Namibia	NAM	Africa	Southern Africa	Sub-Saharan Africa
-154	Nauru	NRU	Oceania	Micronesia	
-155	Nepal	NPL	Asia	Southern Asia	
-156	Netherlands	NLD	Europe	Western Europe	
-157	New Caledonia	NCL	Oceania	Melanesia	
-158	New Zealand	NZL	Oceania	Australia and New Zealand	
-159	Nicaragua	NIC	North America	Central America	Latin America and the Caribbean
-160	Niger	NER	Africa	Western Africa	Sub-Saharan Africa
-161	Nigeria	NGA	Africa	Western Africa	Sub-Saharan Africa
-162	Niue	NIU	Oceania	Polynesia	
-163	Norfolk Island	NFK	Oceania	Australia and New Zealand	
-164	North Macedonia	MKD	Europe	Southern Europe	
-165	Northern Mariana Islands	MNP	Oceania	Micronesia	
-166	Norway	NOR	Europe	Northern Europe	
-167	Oman	OMN	Asia	Western Asia	
-168	Pakistan	PAK	Asia	Southern Asia	
-169	Palau	PLW	Oceania	Micronesia	
-170	Panama	PAN	North America	Central America	Latin America and the Caribbean
-171	Papua New Guinea	PNG	Oceania	Melanesia	
-172	Paraguay	PRY	South America	South America	Latin America and the Caribbean
-173	Peru	PER	South America	South America	Latin America and the Caribbean
-174	Philippines	PHL	Asia	South-eastern Asia	
-175	Pitcairn	PCN	Oceania	Polynesia	
-176	Poland	POL	Europe	Eastern Europe	
-177	Portugal	PRT	Europe	Southern Europe	
-178	Puerto Rico	PRI	North America	Caribbean	Latin America and the Caribbean
-179	Qatar	QAT	Asia	Western Asia	
-180	Republic of Korea	KOR	Asia	Eastern Asia	
-181	Republic of Moldova	MDA	Europe	Eastern Europe	
-182	R�union	REU	Africa	Eastern Africa	Sub-Saharan Africa
-183	Romania	ROU	Europe	Eastern Europe	
-184	Russian Federation	RUS	Europe	Eastern Europe	
-185	Rwanda	RWA	Africa	Eastern Africa	Sub-Saharan Africa
-186	Saint Barth�lemy	BLM	North America	Caribbean	Latin America and the Caribbean
-187	Saint Helena	SHN	Africa	Western Africa	Sub-Saharan Africa
-188	Saint Kitts and Nevis	KNA	North America	Caribbean	Latin America and the Caribbean
-189	Saint Lucia	LCA	North America	Caribbean	Latin America and the Caribbean
-190	Saint Martin (French Part)	MAF	North America	Caribbean	Latin America and the Caribbean
-191	Saint Pierre and Miquelon	SPM	North America	Northern America	
-192	Saint Vincent and the Grenadines	VCT	North America	Caribbean	Latin America and the Caribbean
-193	Samoa	WSM	Oceania	Polynesia	
-194	San Marino	SMR	Europe	Southern Europe	
-195	Sao Tome and Principe	STP	Africa	Middle Africa	Sub-Saharan Africa
-196	Sark		Europe	Northern Europe	Channel Islands
-197	Saudi Arabia	SAU	Asia	Western Asia	
-198	Senegal	SEN	Africa	Western Africa	Sub-Saharan Africa
-199	Serbia	SRB	Europe	Southern Europe	
-200	Seychelles	SYC	Africa	Eastern Africa	Sub-Saharan Africa
-201	Sierra Leone	SLE	Africa	Western Africa	Sub-Saharan Africa
-202	Singapore	SGP	Asia	South-eastern Asia	
-203	Sint Maarten (Dutch part)	SXM	North America	Caribbean	Latin America and the Caribbean
-204	Slovakia	SVK	Europe	Eastern Europe	
-205	Slovenia	SVN	Europe	Southern Europe	
-206	Solomon Islands	SLB	Oceania	Melanesia	
-207	Somalia	SOM	Africa	Eastern Africa	Sub-Saharan Africa
-208	South Africa	ZAF	Africa	Southern Africa	Sub-Saharan Africa
-209	South Georgia and the South Sandwich Islands	SGS	South America	South America	Latin America and the Caribbean
-210	South Sudan	SSD	Africa	Eastern Africa	Sub-Saharan Africa
-211	Spain	ESP	Europe	Southern Europe	
-212	Sri Lanka	LKA	Asia	Southern Asia	
-213	State of Palestine	PSE	Asia	Western Asia	
-214	Sudan	SDN	Africa	Northern Africa	
-215	Suriname	SUR	South America	South America	Latin America and the Caribbean
-216	Svalbard and Jan Mayen Islands	SJM	Europe	Northern Europe	
-217	Sweden	SWE	Europe	Northern Europe	
-218	Switzerland	CHE	Europe	Western Europe	
-219	Syrian Arab Republic	SYR	Asia	Western Asia	
-220	Tajikistan	TJK	Asia	Central Asia	
-221	Thailand	THA	Asia	South-eastern Asia	
-222	Timor-Leste	TLS	Asia	South-eastern Asia	
-223	Togo	TGO	Africa	Western Africa	Sub-Saharan Africa
-224	Tokelau	TKL	Oceania	Polynesia	
-225	Tonga	TON	Oceania	Polynesia	
-226	Trinidad and Tobago	TTO	North America	Caribbean	Latin America and the Caribbean
-227	Tunisia	TUN	Africa	Northern Africa	
-228	Turkey	TUR	Asia	Western Asia	
-229	Turkmenistan	TKM	Asia	Central Asia	
-230	Turks and Caicos Islands	TCA	North America	Caribbean	Latin America and the Caribbean
-231	Tuvalu	TUV	Oceania	Polynesia	
-232	Uganda	UGA	Africa	Eastern Africa	Sub-Saharan Africa
-233	Ukraine	UKR	Europe	Eastern Europe	
-234	United Arab Emirates	ARE	Asia	Western Asia	
-235	United Kingdom of Great Britain and Northern Ireland	GBR	Europe	Northern Europe	
-236	United Republic of Tanzania	TZA	Africa	Eastern Africa	Sub-Saharan Africa
-237	United States Minor Outlying Islands	UMI	Oceania	Micronesia	
-238	United States of America	USA	North America	Northern America	
-239	United States Virgin Islands	VIR	North America	Caribbean	Latin America and the Caribbean
-240	Uruguay	URY	South America	South America	Latin America and the Caribbean
-241	Uzbekistan	UZB	Asia	Central Asia	
-242	Vanuatu	VUT	Oceania	Melanesia	
-243	Venezuela (Bolivarian Republic of)	VEN	South America	South America	Latin America and the Caribbean
-244	Viet Nam	VNM	Asia	South-eastern Asia	
-245	Wallis and Futuna Islands	WLF	Oceania	Polynesia	
-246	Western Sahara	ESH	Africa	Northern Africa	
-247	Yemen	YEM	Asia	Western Asia	
-248	Zambia	ZMB	Africa	Eastern Africa	Sub-Saharan Africa
-249	Zimbabwe	ZWE	Africa	Eastern Africa	Sub-Saharan Africa
+﻿id;Country;Code;Continent;Region 1;Region2
+1;Afghanistan;AFG;Asia;Southern Asia;
+2;Åland Islands;ALA;Europe;Northern Europe;
+3;Albania;ALB;Europe;Southern Europe;
+4;Algeria;DZA;Africa;Northern Africa;
+5;American Samoa;ASM;Oceania;Polynesia;
+6;Andorra;AND;Europe;Southern Europe;
+7;Angola;AGO;Africa;Middle Africa;Sub-Saharan Africa
+8;Anguilla;AIA;North America;Caribbean;Latin America and the Caribbean
+9;Antarctica;ATA;Antarctica;Antarctica;
+10;Antigua and Barbuda;ATG;North America;Caribbean;Latin America and the Caribbean
+11;Argentina;ARG;South America;South America;Latin America and the Caribbean
+12;Armenia;ARM;Asia;Western Asia;
+13;Aruba;ABW;North America;Caribbean;Latin America and the Caribbean
+14;Australia;AUS;Oceania;Australia and New Zealand;
+15;Austria;AUT;Europe;Western Europe;
+16;Azerbaijan;AZE;Asia;Western Asia;
+17;Bahamas;BHS;North America;Caribbean;Latin America and the Caribbean
+18;Bahrain;BHR;Asia;Western Asia;
+19;Bangladesh;BGD;Asia;Southern Asia;
+20;Barbados;BRB;North America;Caribbean;Latin America and the Caribbean
+21;Belarus;BLR;Europe;Eastern Europe;
+22;Belgium;BEL;Europe;Western Europe;
+23;Belize;BLZ;North America;Central America;Latin America and the Caribbean
+24;Benin;BEN;Africa;Western Africa;Sub-Saharan Africa
+25;Bermuda;BMU;North America;Northern America;
+26;Bhutan;BTN;Asia;Southern Asia;
+27;Bolivia (Plurinational State of);BOL;South America;South America;Latin America and the Caribbean
+28;Bonaire, Sint Eustatius and Saba;BES;North America;Caribbean;Latin America and the Caribbean
+29;Bosnia and Herzegovina;BIH;Europe;Southern Europe;
+30;Botswana;BWA;Africa;Southern Africa;Sub-Saharan Africa
+31;Bouvet Island;BVT;South America;South America;Latin America and the Caribbean
+32;Brazil;BRA;South America;South America;Latin America and the Caribbean
+33;British Indian Ocean Territory;IOT;Africa;Eastern Africa;Sub-Saharan Africa
+34;British Virgin Islands;VGB;North America;Caribbean;Latin America and the Caribbean
+35;Brunei Darussalam;BRN;Asia;South-eastern Asia;
+36;Bulgaria;BGR;Europe;Eastern Europe;
+37;Burkina Faso;BFA;Africa;Western Africa;Sub-Saharan Africa
+38;Burundi;BDI;Africa;Eastern Africa;Sub-Saharan Africa
+39;Cabo Verde;CPV;Africa;Western Africa;Sub-Saharan Africa
+40;Cambodia;KHM;Asia;South-eastern Asia;
+41;Cameroon;CMR;Africa;Middle Africa;Sub-Saharan Africa
+42;Canada;CAN;North America;Northern America;
+43;Cayman Islands;CYM;North America;Caribbean;Latin America and the Caribbean
+44;Central African Republic;CAF;Africa;Middle Africa;Sub-Saharan Africa
+45;Chad;TCD;Africa;Middle Africa;Sub-Saharan Africa
+46;Chile;CHL;South America;South America;Latin America and the Caribbean
+47;China;CHN;Asia;Eastern Asia;
+48;China, Hong Kong Special Administrative Region;HKG;Asia;Eastern Asia;
+49;China, Macao Special Administrative Region;MAC;Asia;Eastern Asia;
+50;Christmas Island;CXR;Oceania;Australia and New Zealand;
+51;Cocos (Keeling) Islands;CCK;Oceania;Australia and New Zealand;
+52;Colombia;COL;South America;South America;Latin America and the Caribbean
+53;Comoros;COM;Africa;Eastern Africa;Sub-Saharan Africa
+54;Congo;COG;Africa;Middle Africa;Sub-Saharan Africa
+55;Cook Islands;COK;Oceania;Polynesia;
+56;Costa Rica;CRI;North America;Central America;Latin America and the Caribbean
+57;Côte d’Ivoire;CIV;Africa;Western Africa;Sub-Saharan Africa
+58;Croatia;HRV;Europe;Southern Europe;
+59;Cuba;CUB;North America;Caribbean;Latin America and the Caribbean
+60;Curaçao;CUW;North America;Caribbean;Latin America and the Caribbean
+61;Cyprus;CYP;Asia;Western Asia;
+62;Czechia;CZE;Europe;Eastern Europe;
+63;Democratic People's Republic of Korea;PRK;Asia;Eastern Asia;
+64;Democratic Republic of the Congo;COD;Africa;Middle Africa;Sub-Saharan Africa
+65;Denmark;DNK;Europe;Northern Europe;
+66;Djibouti;DJI;Africa;Eastern Africa;Sub-Saharan Africa
+67;Dominica;DMA;North America;Caribbean;Latin America and the Caribbean
+68;Dominican Republic;DOM;North America;Caribbean;Latin America and the Caribbean
+69;Ecuador;ECU;South America;South America;Latin America and the Caribbean
+70;Egypt;EGY;Africa;Northern Africa;
+71;El Salvador;SLV;North America;Central America;Latin America and the Caribbean
+72;Equatorial Guinea;GNQ;Africa;Middle Africa;Sub-Saharan Africa
+73;Eritrea;ERI;Africa;Eastern Africa;Sub-Saharan Africa
+74;Estonia;EST;Europe;Northern Europe;
+75;Eswatini;SWZ;Africa;Southern Africa;Sub-Saharan Africa
+76;Ethiopia;ETH;Africa;Eastern Africa;Sub-Saharan Africa
+77;Falkland Islands (Malvinas);FLK;South America;South America;Latin America and the Caribbean
+78;Faroe Islands;FRO;Europe;Northern Europe;
+79;Fiji;FJI;Oceania;Melanesia;
+80;Finland;FIN;Europe;Northern Europe;
+81;France;FRA;Europe;Western Europe;
+82;French Guiana;GUF;South America;South America;Latin America and the Caribbean
+83;French Polynesia;PYF;Oceania;Polynesia;
+84;French Southern Territories;ATF;Africa;Eastern Africa;Sub-Saharan Africa
+85;Gabon;GAB;Africa;Middle Africa;Sub-Saharan Africa
+86;Gambia;GMB;Africa;Western Africa;Sub-Saharan Africa
+87;Georgia;GEO;Asia;Western Asia;
+88;Germany;DEU;Europe;Western Europe;
+89;Ghana;GHA;Africa;Western Africa;Sub-Saharan Africa
+90;Gibraltar;GIB;Europe;Southern Europe;
+91;Greece;GRC;Europe;Southern Europe;
+92;Greenland;GRL;North America;Northern America;
+93;Grenada;GRD;North America;Caribbean;Latin America and the Caribbean
+94;Guadeloupe;GLP;North America;Caribbean;Latin America and the Caribbean
+95;Guam;GUM;Oceania;Micronesia;
+96;Guatemala;GTM;North America;Central America;Latin America and the Caribbean
+97;Guernsey;GGY;Europe;Northern Europe;Channel Islands
+98;Guinea;GIN;Africa;Western Africa;Sub-Saharan Africa
+99;Guinea-Bissau;GNB;Africa;Western Africa;Sub-Saharan Africa
+100;Guyana;GUY;South America;South America;Latin America and the Caribbean
+101;Haiti;HTI;North America;Caribbean;Latin America and the Caribbean
+102;Heard Island and McDonald Islands;HMD;Oceania;Australia and New Zealand;
+103;Holy See;VAT;Europe;Southern Europe;
+104;Honduras;HND;North America;Central America;Latin America and the Caribbean
+105;Hungary;HUN;Europe;Eastern Europe;
+106;Iceland;ISL;Europe;Northern Europe;
+107;India;IND;Asia;Southern Asia;
+108;Indonesia;IDN;Asia;South-eastern Asia;
+109;Iran (Islamic Republic of);IRN;Asia;Southern Asia;
+110;Iraq;IRQ;Asia;Western Asia;
+111;Ireland;IRL;Europe;Northern Europe;
+112;Isle of Man;IMN;Europe;Northern Europe;
+113;Israel;ISR;Asia;Western Asia;
+114;Italy;ITA;Europe;Southern Europe;
+115;Jamaica;JAM;North America;Caribbean;Latin America and the Caribbean
+116;Japan;JPN;Asia;Eastern Asia;
+117;Jersey;JEY;Europe;Northern Europe;Channel Islands
+118;Jordan;JOR;Asia;Western Asia;
+119;Kazakhstan;KAZ;Asia;Central Asia;
+120;Kenya;KEN;Africa;Eastern Africa;Sub-Saharan Africa
+121;Kiribati;KIR;Oceania;Micronesia;
+122;Kuwait;KWT;Asia;Western Asia;
+123;Kyrgyzstan;KGZ;Asia;Central Asia;
+124;Lao People's Democratic Republic;LAO;Asia;South-eastern Asia;
+125;Latvia;LVA;Europe;Northern Europe;
+126;Lebanon;LBN;Asia;Western Asia;
+127;Lesotho;LSO;Africa;Southern Africa;Sub-Saharan Africa
+128;Liberia;LBR;Africa;Western Africa;Sub-Saharan Africa
+129;Libya;LBY;Africa;Northern Africa;
+130;Liechtenstein;LIE;Europe;Western Europe;
+131;Lithuania;LTU;Europe;Northern Europe;
+132;Luxembourg;LUX;Europe;Western Europe;
+133;Madagascar;MDG;Africa;Eastern Africa;Sub-Saharan Africa
+134;Malawi;MWI;Africa;Eastern Africa;Sub-Saharan Africa
+135;Malaysia;MYS;Asia;South-eastern Asia;
+136;Maldives;MDV;Asia;Southern Asia;
+137;Mali;MLI;Africa;Western Africa;Sub-Saharan Africa
+138;Malta;MLT;Europe;Southern Europe;
+139;Marshall Islands;MHL;Oceania;Micronesia;
+140;Martinique;MTQ;North America;Caribbean;Latin America and the Caribbean
+141;Mauritania;MRT;Africa;Western Africa;Sub-Saharan Africa
+142;Mauritius;MUS;Africa;Eastern Africa;Sub-Saharan Africa
+143;Mayotte;MYT;Africa;Eastern Africa;Sub-Saharan Africa
+144;Mexico;MEX;North America;Central America;Latin America and the Caribbean
+145;Micronesia (Federated States of);FSM;Oceania;Micronesia;
+146;Monaco;MCO;Europe;Western Europe;
+147;Mongolia;MNG;Asia;Eastern Asia;
+148;Montenegro;MNE;Europe;Southern Europe;
+149;Montserrat;MSR;North America;Caribbean;Latin America and the Caribbean
+150;Morocco;MAR;Africa;Northern Africa;
+151;Mozambique;MOZ;Africa;Eastern Africa;Sub-Saharan Africa
+152;Myanmar;MMR;Asia;South-eastern Asia;
+153;Namibia;NAM;Africa;Southern Africa;Sub-Saharan Africa
+154;Nauru;NRU;Oceania;Micronesia;
+155;Nepal;NPL;Asia;Southern Asia;
+156;Netherlands;NLD;Europe;Western Europe;
+157;New Caledonia;NCL;Oceania;Melanesia;
+158;New Zealand;NZL;Oceania;Australia and New Zealand;
+159;Nicaragua;NIC;North America;Central America;Latin America and the Caribbean
+160;Niger;NER;Africa;Western Africa;Sub-Saharan Africa
+161;Nigeria;NGA;Africa;Western Africa;Sub-Saharan Africa
+162;Niue;NIU;Oceania;Polynesia;
+163;Norfolk Island;NFK;Oceania;Australia and New Zealand;
+164;North Macedonia;MKD;Europe;Southern Europe;
+165;Northern Mariana Islands;MNP;Oceania;Micronesia;
+166;Norway;NOR;Europe;Northern Europe;
+167;Oman;OMN;Asia;Western Asia;
+168;Pakistan;PAK;Asia;Southern Asia;
+169;Palau;PLW;Oceania;Micronesia;
+170;Panama;PAN;North America;Central America;Latin America and the Caribbean
+171;Papua New Guinea;PNG;Oceania;Melanesia;
+172;Paraguay;PRY;South America;South America;Latin America and the Caribbean
+173;Peru;PER;South America;South America;Latin America and the Caribbean
+174;Philippines;PHL;Asia;South-eastern Asia;
+175;Pitcairn;PCN;Oceania;Polynesia;
+176;Poland;POL;Europe;Eastern Europe;
+177;Portugal;PRT;Europe;Southern Europe;
+178;Puerto Rico;PRI;North America;Caribbean;Latin America and the Caribbean
+179;Qatar;QAT;Asia;Western Asia;
+180;Republic of Korea;KOR;Asia;Eastern Asia;
+181;Republic of Moldova;MDA;Europe;Eastern Europe;
+182;Réunion;REU;Africa;Eastern Africa;Sub-Saharan Africa
+183;Romania;ROU;Europe;Eastern Europe;
+184;Russian Federation;RUS;Europe;Eastern Europe;
+185;Rwanda;RWA;Africa;Eastern Africa;Sub-Saharan Africa
+186;Saint Barthélemy;BLM;North America;Caribbean;Latin America and the Caribbean
+187;Saint Helena;SHN;Africa;Western Africa;Sub-Saharan Africa
+188;Saint Kitts and Nevis;KNA;North America;Caribbean;Latin America and the Caribbean
+189;Saint Lucia;LCA;North America;Caribbean;Latin America and the Caribbean
+190;Saint Martin (French Part);MAF;North America;Caribbean;Latin America and the Caribbean
+191;Saint Pierre and Miquelon;SPM;North America;Northern America;
+192;Saint Vincent and the Grenadines;VCT;North America;Caribbean;Latin America and the Caribbean
+193;Samoa;WSM;Oceania;Polynesia;
+194;San Marino;SMR;Europe;Southern Europe;
+195;Sao Tome and Principe;STP;Africa;Middle Africa;Sub-Saharan Africa
+196;Sark;;Europe;Northern Europe;Channel Islands
+197;Saudi Arabia;SAU;Asia;Western Asia;
+198;Senegal;SEN;Africa;Western Africa;Sub-Saharan Africa
+199;Serbia;SRB;Europe;Southern Europe;
+200;Seychelles;SYC;Africa;Eastern Africa;Sub-Saharan Africa
+201;Sierra Leone;SLE;Africa;Western Africa;Sub-Saharan Africa
+202;Singapore;SGP;Asia;South-eastern Asia;
+203;Sint Maarten (Dutch part);SXM;North America;Caribbean;Latin America and the Caribbean
+204;Slovakia;SVK;Europe;Eastern Europe;
+205;Slovenia;SVN;Europe;Southern Europe;
+206;Solomon Islands;SLB;Oceania;Melanesia;
+207;Somalia;SOM;Africa;Eastern Africa;Sub-Saharan Africa
+208;South Africa;ZAF;Africa;Southern Africa;Sub-Saharan Africa
+209;South Georgia and the South Sandwich Islands;SGS;South America;South America;Latin America and the Caribbean
+210;South Sudan;SSD;Africa;Eastern Africa;Sub-Saharan Africa
+211;Spain;ESP;Europe;Southern Europe;
+212;Sri Lanka;LKA;Asia;Southern Asia;
+213;State of Palestine;PSE;Asia;Western Asia;
+214;Sudan;SDN;Africa;Northern Africa;
+215;Suriname;SUR;South America;South America;Latin America and the Caribbean
+216;Svalbard and Jan Mayen Islands;SJM;Europe;Northern Europe;
+217;Sweden;SWE;Europe;Northern Europe;
+218;Switzerland;CHE;Europe;Western Europe;
+219;Syrian Arab Republic;SYR;Asia;Western Asia;
+220;Tajikistan;TJK;Asia;Central Asia;
+221;Thailand;THA;Asia;South-eastern Asia;
+222;Timor-Leste;TLS;Asia;South-eastern Asia;
+223;Togo;TGO;Africa;Western Africa;Sub-Saharan Africa
+224;Tokelau;TKL;Oceania;Polynesia;
+225;Tonga;TON;Oceania;Polynesia;
+226;Trinidad and Tobago;TTO;North America;Caribbean;Latin America and the Caribbean
+227;Tunisia;TUN;Africa;Northern Africa;
+228;Turkey;TUR;Asia;Western Asia;
+229;Turkmenistan;TKM;Asia;Central Asia;
+230;Turks and Caicos Islands;TCA;North America;Caribbean;Latin America and the Caribbean
+231;Tuvalu;TUV;Oceania;Polynesia;
+232;Uganda;UGA;Africa;Eastern Africa;Sub-Saharan Africa
+233;Ukraine;UKR;Europe;Eastern Europe;
+234;United Arab Emirates;ARE;Asia;Western Asia;
+235;United Kingdom of Great Britain and Northern Ireland;GBR;Europe;Northern Europe;
+236;United Republic of Tanzania;TZA;Africa;Eastern Africa;Sub-Saharan Africa
+237;United States Minor Outlying Islands;UMI;Oceania;Micronesia;
+238;United States of America;USA;North America;Northern America;
+239;United States Virgin Islands;VIR;North America;Caribbean;Latin America and the Caribbean
+240;Uruguay;URY;South America;South America;Latin America and the Caribbean
+241;Uzbekistan;UZB;Asia;Central Asia;
+242;Vanuatu;VUT;Oceania;Melanesia;
+243;Venezuela (Bolivarian Republic of);VEN;South America;South America;Latin America and the Caribbean
+244;Viet Nam;VNM;Asia;South-eastern Asia;
+245;Wallis and Futuna Islands;WLF;Oceania;Polynesia;
+246;Western Sahara;ESH;Africa;Northern Africa;
+247;Yemen;YEM;Asia;Western Asia;
+248;Zambia;ZMB;Africa;Eastern Africa;Sub-Saharan Africa
+249;Zimbabwe;ZWE;Africa;Eastern Africa;Sub-Saharan Africa
