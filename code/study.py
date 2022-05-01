@@ -24,8 +24,6 @@ class Study():
 
     # data parameters
     downsampling: int = 1
-    indexes: list = None
-    study_params: list = None
 
     def __post_init__(self):
 
