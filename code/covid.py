@@ -137,6 +137,10 @@ class CovidStudyMixin():
         return pd.MultiIndex.from_tuples(
             (tup for group in self.study_groups for tup in group))
 
+    @property
+    def countries(self) -> List[str]:
+        return list(set(self.data.index.get_level_values(-1)))
+
     def filter_columns(self):
         """
         This method ensures that only the interesting columns and the indexes are kept
