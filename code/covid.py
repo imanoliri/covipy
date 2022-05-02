@@ -198,6 +198,9 @@ class CovidStudyMixin():
         This method ensures that the countries to study are set correctly.
         If it's not defined but country_data and country_filter are, they are inferred.
         """
+        if self.countries_to_study is None:
+            """Nothig to set. Skip"""
+            return
 
         if isinstance(self.countries_to_study, list):
             """Correctly defined. Skip"""
