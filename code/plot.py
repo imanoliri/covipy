@@ -68,6 +68,8 @@ class PlotStudyMixin():
         If a partial column is passed, a list of all the subcolumns is returned.
         Else it's left as is.
         """
+        if isinstance(partial_column, str):
+            partial_column = (partial_column, )
         depth_of_columns = 1
         if isinstance(df.columns, pd.MultiIndex):
             depth_of_columns = df.columns.nlevels
