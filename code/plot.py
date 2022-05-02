@@ -81,19 +81,23 @@ class PlotStudyMixin():
         return self.all_columns_for_partial(partial_column, self.data,
                                             depth_of_columns)
 
-    def complete_columns(self, columns: List[Column],
-                         df: pd.DataFrame) -> List[Column]:
+    def complete_columns(self,
+                         columns: List[Column],
+                         df: pd.DataFrame = None) -> List[Column]:
         """
         Substitute any partial columns in the list by their related columns in the dataframe.
         """
+        if df is None:
+            df = self.data
         nested_columns = [[elem] if not isinstance(elem, list) else elem
                           for elem in (self.complete_column(col, df)
                                        for col in columns)]
 
         return [e for elem in nested_columns for e in elem]
 
-    def prepare_columns(self, columns: List[Column],
-                        df: pd.DataFrame) -> List[Column]:
+    def prepare_columns(self,
+                        columns: List[Column],
+                        df: pd.DataFrame = None) -> List[Column]:
         """
         Prepares all the columns in the list of lists of columns.
 
@@ -104,6 +108,8 @@ class PlotStudyMixin():
         Returns:
             List[List[Column]]: Prepared list of columns.
         """
+        if df is None:
+            df = self.data
         if not isinstance(columns, list):
             columns = [columns]
         return self.complete_columns(columns, df)
