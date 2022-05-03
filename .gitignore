@@ -1,5 +1,6 @@
 # data directory
-data/*
+data/latest.db
+data/timeseries_by_country_old.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -3,12 +3,12 @@ Big data analysis of the Covid-19 / Wuhan-virus pandemic based on python
 
 
 ## Data
-Data is in the compressed `data.zip` file. You should extract it before executing some of the notebooks.
-From:
+You should get your own local `timeseries_by_country.csv` file from:
   - https://covid19datahub.io/
 
-
 See `notebooks/data_description.ipynb` for more information about the contents of data.
+
+The `country_data.csv` was taken from UN population estimations as of 2020.
 
 
 ## Research Questions
