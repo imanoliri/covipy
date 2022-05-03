@@ -139,7 +139,7 @@ class CovidStudyMixin():
 
     @property
     def countries(self) -> List[str]:
-        return list(set(self.data.index.get_level_values(-1)))
+        return list(set(self.data.index.get_level_values('country')))
 
     def filter_columns(self):
         """
