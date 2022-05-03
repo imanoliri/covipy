@@ -26,7 +26,7 @@ class CovidStudyMixin():
         super().__post_init__()
 
         # Indexes
-        self.indexes = ['date', 'administrative_area_level_1']
+        self.indexes = ['date', 'country']
 
         # Country data
         self.set_countries_to_study()
@@ -148,10 +148,10 @@ class CovidStudyMixin():
         """
         indexes = self.indexes
         study_params = self.study_params.to_list()
-        if self.data.index.nlevels == 1:
+        if self.data.columns.nlevels == 1:
             study_params = self.study_params.get_level_values(-1).to_list()
 
-        elif self.data.index.nlevels == 3:
+        elif self.data.columns.nlevels == 3:
             indexes = pd.MultiIndex.from_tuples(
                 ((index, '', '') for index in indexes))
         else:
