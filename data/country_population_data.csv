@@ -1,290 +1,290 @@
-﻿Index;Region, subregion, country or area *;Type;Population
-1;WORLD;World; 7 794 799
-2;UN development groups;Label/Separator;...
-3;More developed regions;Development Group; 1 273 304
-4;Less developed regions;Development Group; 6 521 494
-5;Least developed countries;Development Group; 1 057 438
-6;Less developed regions, excluding least developed countries;Development Group; 5 464 056
-7;Less developed regions, excluding China;Development Group; 5 050 208
-8;Land-locked Developing Countries (LLDC);Special other;  533 143
-9;Small Island Developing States (SIDS);Special other;  72 076
-10;World Bank income groups;Label/Separator;...
-11;High-income countries;Income Group; 1 263 093
-12;Middle-income countries;Income Group; 5 753 052
-13;Upper-middle-income countries;Income Group; 2 654 816
-14;Lower-middle-income countries;Income Group; 3 098 235
-15;Low-income countries;Income Group;  775 711
-16;No income group available;Income Group;  2 944
-17;Geographic regions;Label/Separator;...
-18;Africa;Region; 1 340 598
-19;Asia;Region; 4 641 055
-20;Europe;Region;  747 636
-21;Latin America and the Caribbean;Region;  653 962
-22;Northern America;Region;  368 870
-23;Oceania;Region;  42 678
-24;Sustainable Development Goal (SDG) regions;Label/Separator;...
-25;SUB-SAHARAN AFRICA;SDG region; 1 094 366
-26;Eastern Africa;Subregion;  445 406
-27;Burundi;Country/Area;  11 891
-28;Comoros;Country/Area;870,00
-29;Djibouti;Country/Area;988,00
-30;Eritrea;Country/Area;  3 546
-31;Ethiopia;Country/Area;  114 964
-32;Kenya;Country/Area;  53 771
-33;Madagascar;Country/Area;  27 691
-34;Malawi;Country/Area;  19 130
-35;Mauritius;Country/Area;  1 272
-36;Mayotte;Country/Area;273,00
-37;Mozambique;Country/Area;  31 255
-38;Réunion;Country/Area;895,00
-39;Rwanda;Country/Area;  12 952
-40;Seychelles;Country/Area;98,00
-41;Somalia;Country/Area;  15 893
-42;South Sudan;Country/Area;  11 194
-43;Uganda;Country/Area;  45 741
-44;United Republic of Tanzania;Country/Area;  59 734
-45;Zambia;Country/Area;  18 384
-46;Zimbabwe;Country/Area;  14 863
-47;Middle Africa;Subregion;  179 595
-48;Angola;Country/Area;  32 866
-49;Cameroon;Country/Area;  26 546
-50;Central African Republic;Country/Area;  4 830
-51;Chad;Country/Area;  16 426
-52;Congo;Country/Area;  5 518
-53;Democratic Republic of the Congo;Country/Area;  89 561
-54;Equatorial Guinea;Country/Area;  1 403
-55;Gabon;Country/Area;  2 226
-56;Sao Tome and Principe;Country/Area;219,00
-57;Southern Africa;Subregion;  67 504
-58;Botswana;Country/Area;  2 352
-59;Eswatini;Country/Area;  1 160
-60;Lesotho;Country/Area;  2 142
-61;Namibia;Country/Area;  2 541
-62;South Africa;Country/Area;  59 309
-63;Western Africa;Subregion;  401 861
-64;Benin;Country/Area;  12 123
-65;Burkina Faso;Country/Area;  20 903
-66;Cabo Verde;Country/Area;556,00
-67;Côte d'Ivoire;Country/Area;  26 378
-68;Gambia;Country/Area;  2 417
-69;Ghana;Country/Area;  31 073
-70;Guinea;Country/Area;  13 133
-71;Guinea-Bissau;Country/Area;  1 968
-72;Liberia;Country/Area;  5 058
-73;Mali;Country/Area;  20 251
-74;Mauritania;Country/Area;  4 650
-75;Niger;Country/Area;  24 207
-76;Nigeria;Country/Area;  206 140
-77;Saint Helena;Country/Area;6,00
-78;Senegal;Country/Area;  16 744
-79;Sierra Leone;Country/Area;  7 977
-80;Togo;Country/Area;  8 279
-81;NORTHERN AFRICA AND WESTERN ASIA;SDG region;  525 869
-82;Northern Africa;Subregion;  246 233
-83;Algeria;Country/Area;  43 851
-84;Egypt;Country/Area;  102 334
-85;Libya;Country/Area;  6 871
-86;Morocco;Country/Area;  36 911
-87;Sudan;Country/Area;  43 849
-88;Tunisia;Country/Area;  11 819
-89;Western Sahara;Country/Area;597,00
-90;Western Asia;Subregion;  279 637
-91;Armenia;Country/Area;  2 963
-92;Azerbaijan;Country/Area;  10 139
-93;Bahrain;Country/Area;  1 702
-94;Cyprus;Country/Area;  1 207
-95;Georgia;Country/Area;  3 989
-96;Iraq;Country/Area;  40 223
-97;Israel;Country/Area;  8 656
-98;Jordan;Country/Area;  10 203
-99;Kuwait;Country/Area;  4 271
-100;Lebanon;Country/Area;  6 825
-101;Oman;Country/Area;  5 107
-102;Qatar;Country/Area;  2 881
-103;Saudi Arabia;Country/Area;  34 814
-104;State of Palestine;Country/Area;  5 101
-105;Syrian Arab Republic;Country/Area;  17 501
-106;Turkey;Country/Area;  84 339
-107;United Arab Emirates;Country/Area;  9 890
-108;Yemen;Country/Area;  29 826
-109;CENTRAL AND SOUTHERN ASIA;SDG region; 2 014 709
-110;Central Asia;Subregion;  74 339
-111;Kazakhstan;Country/Area;  18 777
-112;Kyrgyzstan;Country/Area;  6 524
-113;Tajikistan;Country/Area;  9 538
-114;Turkmenistan;Country/Area;  6 031
-115;Uzbekistan;Country/Area;  33 469
-116;Southern Asia;Subregion; 1 940 370
-117;Afghanistan;Country/Area;  38 928
-118;Bangladesh;Country/Area;  164 689
-119;Bhutan;Country/Area;772,00
-120;India;Country/Area; 1 380 004
-121;Iran (Islamic Republic of);Country/Area;  83 993
-122;Maldives;Country/Area;541,00
-123;Nepal;Country/Area;  29 137
-124;Pakistan;Country/Area;  220 892
-125;Sri Lanka;Country/Area;  21 413
-126;EASTERN AND SOUTH-EASTERN ASIA;SDG region; 2 346 709
-127;Eastern Asia;Subregion; 1 678 090
-128;China;Country/Area; 1 439 324
-129;China, Hong Kong SAR;Country/Area;  7 497
-130;China, Macao SAR;Country/Area;649,00
-131;China, Taiwan Province of China;Country/Area;  23 817
-132;Dem. People's Republic of Korea;Country/Area;  25 779
-133;Japan;Country/Area;  126 476
-134;Mongolia;Country/Area;  3 278
-135;Republic of Korea;Country/Area;  51 269
-136;South-Eastern Asia;Subregion;  668 620
-137;Brunei Darussalam;Country/Area;437,00
-138;Cambodia;Country/Area;  16 719
-139;Indonesia;Country/Area;  273 524
-140;Lao People's Democratic Republic;Country/Area;  7 276
-141;Malaysia;Country/Area;  32 366
-142;Myanmar;Country/Area;  54 410
-143;Philippines;Country/Area;  109 581
-144;Singapore;Country/Area;  5 850
-145;Thailand;Country/Area;  69 800
-146;Timor-Leste;Country/Area;  1 318
-147;Viet Nam;Country/Area;  97 339
-148;LATIN AMERICA AND THE CARIBBEAN;SDG region;  653 962
-149;Caribbean;Subregion;  43 532
-150;Anguilla;Country/Area;15,00
-151;Antigua and Barbuda;Country/Area;98,00
-152;Aruba;Country/Area;107,00
-153;Bahamas;Country/Area;393,00
-154;Barbados;Country/Area;287,00
-155;Bonaire, Sint Eustatius and Saba;Country/Area;26,00
-156;British Virgin Islands;Country/Area;30,00
-157;Cayman Islands;Country/Area;66,00
-158;Cuba;Country/Area;  11 327
-159;Curaçao;Country/Area;164,00
-160;Dominica;Country/Area;72,00
-161;Dominican Republic;Country/Area;  10 848
-162;Grenada;Country/Area;113,00
-163;Guadeloupe;Country/Area;400,00
-164;Haiti;Country/Area;  11 403
-165;Jamaica;Country/Area;  2 961
-166;Martinique;Country/Area;375,00
-167;Montserrat;Country/Area;5,00
-168;Puerto Rico;Country/Area;  2 861
-169;Saint Barthélemy;Country/Area;10,00
-170;Saint Kitts and Nevis;Country/Area;53,00
-171;Saint Lucia;Country/Area;184,00
-172;Saint Martin (French part);Country/Area;39,00
-173;Saint Vincent and the Grenadines;Country/Area;111,00
-174;Sint Maarten (Dutch part);Country/Area;43,00
-175;Trinidad and Tobago;Country/Area;  1 399
-176;Turks and Caicos Islands;Country/Area;39,00
-177;United States Virgin Islands;Country/Area;104,00
-178;Central America;Subregion;  179 670
-179;Belize;Country/Area;398,00
-180;Costa Rica;Country/Area;  5 094
-181;El Salvador;Country/Area;  6 486
-182;Guatemala;Country/Area;  17 916
-183;Honduras;Country/Area;  9 905
-184;Mexico;Country/Area;  128 933
-185;Nicaragua;Country/Area;  6 625
-186;Panama;Country/Area;  4 315
-187;South America;Subregion;  430 760
-188;Argentina;Country/Area;  45 196
-189;Bolivia (Plurinational State of);Country/Area;  11 673
-190;Brazil;Country/Area;  212 559
-191;Chile;Country/Area;  19 116
-192;Colombia;Country/Area;  50 883
-193;Ecuador;Country/Area;  17 643
-194;Falkland Islands (Malvinas);Country/Area;3,00
-195;French Guiana;Country/Area;299,00
-196;Guyana;Country/Area;787,00
-197;Paraguay;Country/Area;  7 133
-198;Peru;Country/Area;  32 972
-199;Suriname;Country/Area;587,00
-200;Uruguay;Country/Area;  3 474
-201;Venezuela (Bolivarian Republic of);Country/Area;  28 436
-202;AUSTRALIA/NEW ZEALAND;SDG region;  30 322
-203;Australia;Country/Area;  25 500
-204;New Zealand;Country/Area;  4 822
-205;OCEANIA (EXCLUDING AUSTRALIA AND NEW ZEALAND);SDG region;  12 356
-206;Melanesia;Subregion;  11 123
-207;Fiji;Country/Area;896,00
-208;New Caledonia;Country/Area;285,00
-209;Papua New Guinea;Country/Area;  8 947
-210;Solomon Islands;Country/Area;687,00
-211;Vanuatu;Country/Area;307,00
-212;Micronesia;Subregion;549,00
-213;Guam;Country/Area;169,00
-214;Kiribati;Country/Area;119,00
-215;Marshall Islands;Country/Area;59,00
-216;Micronesia (Fed. States of);Country/Area;115,00
-217;Nauru;Country/Area;11,00
-218;Northern Mariana Islands;Country/Area;58,00
-219;Palau;Country/Area;18,00
-220;Polynesia;Subregion;684,00
-221;American Samoa;Country/Area;55,00
-222;Cook Islands;Country/Area;18,00
-223;French Polynesia;Country/Area;281,00
-224;Niue;Country/Area;2,00
-225;Samoa;Country/Area;198,00
-226;Tokelau;Country/Area;1,00
-227;Tonga;Country/Area;106,00
-228;Tuvalu;Country/Area;12,00
-229;Wallis and Futuna Islands;Country/Area;11,00
-230;EUROPE AND NORTHERN AMERICA;SDG region; 1 116 506
-231;EUROPE;SDG subregion;  747 636
-232;Eastern Europe;Subregion;  293 013
-233;Belarus;Country/Area;  9 449
-234;Bulgaria;Country/Area;  6 948
-235;Czechia;Country/Area;  10 709
-236;Hungary;Country/Area;  9 660
-237;Poland;Country/Area;  37 847
-238;Republic of Moldova;Country/Area;  4 034
-239;Romania;Country/Area;  19 238
-240;Russian Federation;Country/Area;  145 934
-241;Slovakia;Country/Area;  5 460
-242;Ukraine;Country/Area;  43 734
-243;Northern Europe;Subregion;  106 261
-244;Channel Islands;Country/Area;174,00
-245;Denmark;Country/Area;  5 792
-246;Estonia;Country/Area;  1 327
-247;Faroe Islands;Country/Area;49,00
-248;Finland;Country/Area;  5 541
-249;Iceland;Country/Area;341,00
-250;Ireland;Country/Area;  4 938
-251;Isle of Man;Country/Area;85,00
-252;Latvia;Country/Area;  1 886
-253;Lithuania;Country/Area;  2 722
-254;Norway;Country/Area;  5 421
-255;Sweden;Country/Area;  10 099
-256;United Kingdom;Country/Area;  67 886
-257;Southern Europe;Subregion;  152 215
-258;Albania;Country/Area;  2 878
-259;Andorra;Country/Area;77,00
-260;Bosnia and Herzegovina;Country/Area;  3 281
-261;Croatia;Country/Area;  4 105
-262;Gibraltar;Country/Area;34,00
-263;Greece;Country/Area;  10 423
-264;Holy See;Country/Area;1,00
-265;Italy;Country/Area;  60 462
-266;Malta;Country/Area;442,00
-267;Montenegro;Country/Area;628,00
-268;North Macedonia;Country/Area;  2 083
-269;Portugal;Country/Area;  10 197
-270;San Marino;Country/Area;34,00
-271;Serbia;Country/Area;  8 737
-272;Slovenia;Country/Area;  2 079
-273;Spain;Country/Area;  46 755
-274;Western Europe;Subregion;  196 146
-275;Austria;Country/Area;  9 006
-276;Belgium;Country/Area;  11 590
-277;France;Country/Area;  65 274
-278;Germany;Country/Area;  83 784
-279;Liechtenstein;Country/Area;38,00
-280;Luxembourg;Country/Area;626,00
-281;Monaco;Country/Area;39,00
-282;Netherlands;Country/Area;  17 135
-283;Switzerland;Country/Area;  8 655
-284;NORTHERN AMERICA;SDG subregion;  368 870
-285;Bermuda;Country/Area;62,00
-286;Canada;Country/Area;  37 742
-287;Greenland;Country/Area;57,00
-288;Saint Pierre and Miquelon;Country/Area;6,00
-289;United States of America;Country/Area;  331 003
+"Region, subregion, country or area *",Index,Type,Population
+WORLD,1,World,7794799000.0
+UN development groups,2,Label/Separator,
+More developed regions,3,Development Group,1273304000.0
+Less developed regions,4,Development Group,6521494000.0
+Least developed countries,5,Development Group,1057438000.0
+"Less developed regions, excluding least developed countries",6,Development Group,5464056000.0
+"Less developed regions, excluding China",7,Development Group,5050208000.0
+Land-locked Developing Countries (LLDC),8,Special other,533143000.0
+Small Island Developing States (SIDS),9,Special other,72076000.0
+World Bank income groups,10,Label/Separator,
+High-income countries,11,Income Group,1263093000.0
+Middle-income countries,12,Income Group,5753052000.0
+Upper-middle-income countries,13,Income Group,2654816000.0
+Lower-middle-income countries,14,Income Group,3098235000.0
+Low-income countries,15,Income Group,775711000.0
+No income group available,16,Income Group,2944000.0
+Geographic regions,17,Label/Separator,
+Africa,18,Region,1340598000.0
+Asia,19,Region,4641055000.0
+Europe,20,Region,747636000.0
+Latin America and the Caribbean,21,Region,653962000.0
+Northern America,22,Region,368870000.0
+Oceania,23,Region,42678000.0
+Sustainable Development Goal (SDG) regions,24,Label/Separator,
+SUB-SAHARAN AFRICA,25,SDG region,1094366000.0
+Eastern Africa,26,Subregion,445406000.0
+Burundi,27,Country/Area,11891000.0
+Comoros,28,Country/Area,870000.0
+Djibouti,29,Country/Area,988000.0
+Eritrea,30,Country/Area,3546000.0
+Ethiopia,31,Country/Area,114964000.0
+Kenya,32,Country/Area,53771000.0
+Madagascar,33,Country/Area,27691000.0
+Malawi,34,Country/Area,19130000.0
+Mauritius,35,Country/Area,1272000.0
+Mayotte,36,Country/Area,273000.0
+Mozambique,37,Country/Area,31255000.0
+Réunion,38,Country/Area,895000.0
+Rwanda,39,Country/Area,12952000.0
+Seychelles,40,Country/Area,98000.0
+Somalia,41,Country/Area,15893000.0
+South Sudan,42,Country/Area,11194000.0
+Uganda,43,Country/Area,45741000.0
+United Republic of Tanzania,44,Country/Area,59734000.0
+Zambia,45,Country/Area,18384000.0
+Zimbabwe,46,Country/Area,14863000.0
+Middle Africa,47,Subregion,179595000.0
+Angola,48,Country/Area,32866000.0
+Cameroon,49,Country/Area,26546000.0
+Central African Republic,50,Country/Area,4830000.0
+Chad,51,Country/Area,16426000.0
+Congo,52,Country/Area,5518000.0
+Democratic Republic of the Congo,53,Country/Area,89561000.0
+Equatorial Guinea,54,Country/Area,1403000.0
+Gabon,55,Country/Area,2226000.0
+Sao Tome and Principe,56,Country/Area,219000.0
+Southern Africa,57,Subregion,67504000.0
+Botswana,58,Country/Area,2352000.0
+Eswatini,59,Country/Area,1160000.0
+Lesotho,60,Country/Area,2142000.0
+Namibia,61,Country/Area,2541000.0
+South Africa,62,Country/Area,59309000.0
+Western Africa,63,Subregion,401861000.0
+Benin,64,Country/Area,12123000.0
+Burkina Faso,65,Country/Area,20903000.0
+Cabo Verde,66,Country/Area,556000.0
+Côte d'Ivoire,67,Country/Area,26378000.0
+Gambia,68,Country/Area,2417000.0
+Ghana,69,Country/Area,31073000.0
+Guinea,70,Country/Area,13133000.0
+Guinea-Bissau,71,Country/Area,1968000.0
+Liberia,72,Country/Area,5058000.0
+Mali,73,Country/Area,20251000.0
+Mauritania,74,Country/Area,4650000.0
+Niger,75,Country/Area,24207000.0
+Nigeria,76,Country/Area,206140000.0
+Saint Helena,77,Country/Area,6000.0
+Senegal,78,Country/Area,16744000.0
+Sierra Leone,79,Country/Area,7977000.0
+Togo,80,Country/Area,8279000.0
+NORTHERN AFRICA AND WESTERN ASIA,81,SDG region,525869000.0
+Northern Africa,82,Subregion,246233000.0
+Algeria,83,Country/Area,43851000.0
+Egypt,84,Country/Area,102334000.0
+Libya,85,Country/Area,6871000.0
+Morocco,86,Country/Area,36911000.0
+Sudan,87,Country/Area,43849000.0
+Tunisia,88,Country/Area,11819000.0
+Western Sahara,89,Country/Area,597000.0
+Western Asia,90,Subregion,279637000.0
+Armenia,91,Country/Area,2963000.0
+Azerbaijan,92,Country/Area,10139000.0
+Bahrain,93,Country/Area,1702000.0
+Cyprus,94,Country/Area,1207000.0
+Georgia,95,Country/Area,3989000.0
+Iraq,96,Country/Area,40223000.0
+Israel,97,Country/Area,8656000.0
+Jordan,98,Country/Area,10203000.0
+Kuwait,99,Country/Area,4271000.0
+Lebanon,100,Country/Area,6825000.0
+Oman,101,Country/Area,5107000.0
+Qatar,102,Country/Area,2881000.0
+Saudi Arabia,103,Country/Area,34814000.0
+State of Palestine,104,Country/Area,5101000.0
+Syrian Arab Republic,105,Country/Area,17501000.0
+Turkey,106,Country/Area,84339000.0
+United Arab Emirates,107,Country/Area,9890000.0
+Yemen,108,Country/Area,29826000.0
+CENTRAL AND SOUTHERN ASIA,109,SDG region,2014709000.0
+Central Asia,110,Subregion,74339000.0
+Kazakhstan,111,Country/Area,18777000.0
+Kyrgyzstan,112,Country/Area,6524000.0
+Tajikistan,113,Country/Area,9538000.0
+Turkmenistan,114,Country/Area,6031000.0
+Uzbekistan,115,Country/Area,33469000.0
+Southern Asia,116,Subregion,1940370000.0
+Afghanistan,117,Country/Area,38928000.0
+Bangladesh,118,Country/Area,164689000.0
+Bhutan,119,Country/Area,772000.0
+India,120,Country/Area,1380004000.0
+Iran (Islamic Republic of),121,Country/Area,83993000.0
+Maldives,122,Country/Area,541000.0
+Nepal,123,Country/Area,29137000.0
+Pakistan,124,Country/Area,220892000.0
+Sri Lanka,125,Country/Area,21413000.0
+EASTERN AND SOUTH-EASTERN ASIA,126,SDG region,2346709000.0
+Eastern Asia,127,Subregion,1678090000.0
+China,128,Country/Area,1439324000.0
+"China, Hong Kong SAR",129,Country/Area,7497000.0
+"China, Macao SAR",130,Country/Area,649000.0
+"China, Taiwan Province of China",131,Country/Area,23817000.0
+Dem. People's Republic of Korea,132,Country/Area,25779000.0
+Japan,133,Country/Area,126476000.0
+Mongolia,134,Country/Area,3278000.0
+Republic of Korea,135,Country/Area,51269000.0
+South-Eastern Asia,136,Subregion,668620000.0
+Brunei Darussalam,137,Country/Area,437000.0
+Cambodia,138,Country/Area,16719000.0
+Indonesia,139,Country/Area,273524000.0
+Lao People's Democratic Republic,140,Country/Area,7276000.0
+Malaysia,141,Country/Area,32366000.0
+Myanmar,142,Country/Area,54410000.0
+Philippines,143,Country/Area,109581000.0
+Singapore,144,Country/Area,5850000.0
+Thailand,145,Country/Area,69800000.0
+Timor-Leste,146,Country/Area,1318000.0
+Viet Nam,147,Country/Area,97339000.0
+LATIN AMERICA AND THE CARIBBEAN,148,SDG region,653962000.0
+Caribbean,149,Subregion,43532000.0
+Anguilla,150,Country/Area,15000.0
+Antigua and Barbuda,151,Country/Area,98000.0
+Aruba,152,Country/Area,107000.0
+Bahamas,153,Country/Area,393000.0
+Barbados,154,Country/Area,287000.0
+"Bonaire, Sint Eustatius and Saba",155,Country/Area,26000.0
+British Virgin Islands,156,Country/Area,30000.0
+Cayman Islands,157,Country/Area,66000.0
+Cuba,158,Country/Area,11327000.0
+Curaçao,159,Country/Area,164000.0
+Dominica,160,Country/Area,72000.0
+Dominican Republic,161,Country/Area,10848000.0
+Grenada,162,Country/Area,113000.0
+Guadeloupe,163,Country/Area,400000.0
+Haiti,164,Country/Area,11403000.0
+Jamaica,165,Country/Area,2961000.0
+Martinique,166,Country/Area,375000.0
+Montserrat,167,Country/Area,5000.0
+Puerto Rico,168,Country/Area,2861000.0
+Saint Barthélemy,169,Country/Area,10000.0
+Saint Kitts and Nevis,170,Country/Area,53000.0
+Saint Lucia,171,Country/Area,184000.0
+Saint Martin (French part),172,Country/Area,39000.0
+Saint Vincent and the Grenadines,173,Country/Area,111000.0
+Sint Maarten (Dutch part),174,Country/Area,43000.0
+Trinidad and Tobago,175,Country/Area,1399000.0
+Turks and Caicos Islands,176,Country/Area,39000.0
+United States Virgin Islands,177,Country/Area,104000.0
+Central America,178,Subregion,179670000.0
+Belize,179,Country/Area,398000.0
+Costa Rica,180,Country/Area,5094000.0
+El Salvador,181,Country/Area,6486000.0
+Guatemala,182,Country/Area,17916000.0
+Honduras,183,Country/Area,9905000.0
+Mexico,184,Country/Area,128933000.0
+Nicaragua,185,Country/Area,6625000.0
+Panama,186,Country/Area,4315000.0
+South America,187,Subregion,430760000.0
+Argentina,188,Country/Area,45196000.0
+Bolivia (Plurinational State of),189,Country/Area,11673000.0
+Brazil,190,Country/Area,212559000.0
+Chile,191,Country/Area,19116000.0
+Colombia,192,Country/Area,50883000.0
+Ecuador,193,Country/Area,17643000.0
+Falkland Islands (Malvinas),194,Country/Area,3000.0
+French Guiana,195,Country/Area,299000.0
+Guyana,196,Country/Area,787000.0
+Paraguay,197,Country/Area,7133000.0
+Peru,198,Country/Area,32972000.0
+Suriname,199,Country/Area,587000.0
+Uruguay,200,Country/Area,3474000.0
+Venezuela (Bolivarian Republic of),201,Country/Area,28436000.0
+AUSTRALIA/NEW ZEALAND,202,SDG region,30322000.0
+Australia,203,Country/Area,25500000.0
+New Zealand,204,Country/Area,4822000.0
+OCEANIA (EXCLUDING AUSTRALIA AND NEW ZEALAND),205,SDG region,12356000.0
+Melanesia,206,Subregion,11123000.0
+Fiji,207,Country/Area,896000.0
+New Caledonia,208,Country/Area,285000.0
+Papua New Guinea,209,Country/Area,8947000.0
+Solomon Islands,210,Country/Area,687000.0
+Vanuatu,211,Country/Area,307000.0
+Micronesia,212,Subregion,549000.0
+Guam,213,Country/Area,169000.0
+Kiribati,214,Country/Area,119000.0
+Marshall Islands,215,Country/Area,59000.0
+Micronesia (Fed. States of),216,Country/Area,115000.0
+Nauru,217,Country/Area,11000.0
+Northern Mariana Islands,218,Country/Area,58000.0
+Palau,219,Country/Area,18000.0
+Polynesia,220,Subregion,684000.0
+American Samoa,221,Country/Area,55000.0
+Cook Islands,222,Country/Area,18000.0
+French Polynesia,223,Country/Area,281000.0
+Niue,224,Country/Area,2000.0
+Samoa,225,Country/Area,198000.0
+Tokelau,226,Country/Area,1000.0
+Tonga,227,Country/Area,106000.0
+Tuvalu,228,Country/Area,12000.0
+Wallis and Futuna Islands,229,Country/Area,11000.0
+EUROPE AND NORTHERN AMERICA,230,SDG region,1116506000.0
+EUROPE,231,SDG subregion,747636000.0
+Eastern Europe,232,Subregion,293013000.0
+Belarus,233,Country/Area,9449000.0
+Bulgaria,234,Country/Area,6948000.0
+Czechia,235,Country/Area,10709000.0
+Hungary,236,Country/Area,9660000.0
+Poland,237,Country/Area,37847000.0
+Republic of Moldova,238,Country/Area,4034000.0
+Romania,239,Country/Area,19238000.0
+Russian Federation,240,Country/Area,145934000.0
+Slovakia,241,Country/Area,5460000.0
+Ukraine,242,Country/Area,43734000.0
+Northern Europe,243,Subregion,106261000.0
+Channel Islands,244,Country/Area,174000.0
+Denmark,245,Country/Area,5792000.0
+Estonia,246,Country/Area,1327000.0
+Faroe Islands,247,Country/Area,49000.0
+Finland,248,Country/Area,5541000.0
+Iceland,249,Country/Area,341000.0
+Ireland,250,Country/Area,4938000.0
+Isle of Man,251,Country/Area,85000.0
+Latvia,252,Country/Area,1886000.0
+Lithuania,253,Country/Area,2722000.0
+Norway,254,Country/Area,5421000.0
+Sweden,255,Country/Area,10099000.0
+United Kingdom,256,Country/Area,67886000.0
+Southern Europe,257,Subregion,152215000.0
+Albania,258,Country/Area,2878000.0
+Andorra,259,Country/Area,77000.0
+Bosnia and Herzegovina,260,Country/Area,3281000.0
+Croatia,261,Country/Area,4105000.0
+Gibraltar,262,Country/Area,34000.0
+Greece,263,Country/Area,10423000.0
+Holy See,264,Country/Area,1000.0
+Italy,265,Country/Area,60462000.0
+Malta,266,Country/Area,442000.0
+Montenegro,267,Country/Area,628000.0
+North Macedonia,268,Country/Area,2083000.0
+Portugal,269,Country/Area,10197000.0
+San Marino,270,Country/Area,34000.0
+Serbia,271,Country/Area,8737000.0
+Slovenia,272,Country/Area,2079000.0
+Spain,273,Country/Area,46755000.0
+Western Europe,274,Subregion,196146000.0
+Austria,275,Country/Area,9006000.0
+Belgium,276,Country/Area,11590000.0
+France,277,Country/Area,65274000.0
+Germany,278,Country/Area,83784000.0
+Liechtenstein,279,Country/Area,38000.0
+Luxembourg,280,Country/Area,626000.0
+Monaco,281,Country/Area,39000.0
+Netherlands,282,Country/Area,17135000.0
+Switzerland,283,Country/Area,8655000.0
+NORTHERN AMERICA,284,SDG subregion,368870000.0
+Bermuda,285,Country/Area,62000.0
+Canada,286,Country/Area,37742000.0
+Greenland,287,Country/Area,57000.0
+Saint Pierre and Miquelon,288,Country/Area,6000.0
+United States of America,289,Country/Area,331003000.0
