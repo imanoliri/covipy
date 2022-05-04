@@ -184,9 +184,8 @@ class PlotStudyMixin():
                 # Get df only for country, the group of parameters and remove index level for the country
                 df_to_plot = self.data.loc[
                     self.data.index.get_level_values(1) == country,
-                    param_group].reset_index(
-                        'administrative_area_level_1').drop(
-                            columns=['administrative_area_level_1'])
+                    param_group].reset_index('country').drop(
+                        columns=['country'])
 
                 # Skip if empty, all values are null or not minimum data points
                 if df_to_plot.empty:

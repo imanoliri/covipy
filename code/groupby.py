@@ -184,4 +184,4 @@ class CovidCountryStudyGroupby(GroupbyMixin):
         Method to groupby the given data.
         """
 
-        return data.groupby('administrative_area_level_1')
+        return data.groupby('country')

@@ -152,8 +152,7 @@ class CovidStudyMixin():
             study_params = self.study_params.get_level_values(-1).to_list()
 
         elif self.data.columns.nlevels == 3:
-            indexes = pd.MultiIndex.from_tuples(
-                ((index, '', '') for index in indexes))
+            indexes = [(index, '', '') for index in indexes]
         else:
             print(
                 "Couldn't filter out columns because they aren't of depth 1 or 3."
