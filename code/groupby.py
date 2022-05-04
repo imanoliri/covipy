@@ -104,7 +104,11 @@ class GroupbyMixin(ABC):
             parameter_str = '_'.join((par for par in parameter if par != ""))
         column_name = '_'.join([func.__name__, parameter_str])
 
-        return pd.Series(data=[func(df[parameter])], index=[column_name])
+        param_values = df[parameter].dropna()
+        value = float('Nan')
+        if not param_values.empty:
+            value = func(param_values)
+        return pd.Series(data=[value], index=[column_name])
 
     @staticmethod
     def calc_param_located_at_func_param(df: pd.DataFrame,

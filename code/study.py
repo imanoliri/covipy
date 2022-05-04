@@ -4,7 +4,7 @@ This module contains the Study class that allows to analyze a given dataset.
 
 from dataclasses import dataclass
 from itertools import product
-from typing import List, Tuple
+from typing import Callable, List, Tuple
 
 import pandas as pd
 from matplotlib.axes import Axes
@@ -12,6 +12,8 @@ from matplotlib.axes import Axes
 from covid import CovidStudyMixin
 from groupby import CovidCountryStudyGroupby
 from plot import PlotStudyMixin
+
+Column = Tuple[str]
 
 
 @dataclass
@@ -40,19 +42,11 @@ class Study():
         pass
 
     @classmethod
-    def from_df(cls, df: pd.DataFrame, **kwargs) -> 'Study':
-        """
-        Create instance from given DataFrame. Deletes columns that aren't either the
-        indexes or the study_params.
-        """
-        return cls(data=df, **kwargs)
-
-    @classmethod
     def from_csv(cls, path: str, **kwargs) -> 'Study':
         """
         Create instance from given path.
         """
-        return cls.from_df(pd.read_csv(path), **kwargs)
+        return cls(data=pd.read_csv(path), **kwargs)
 
 
 @dataclass
@@ -72,6 +66,7 @@ class CovidCountryStudy(CovidStudyMixin, PlotStudyMixin, Study):
         super().__post_init__()
 
         # Plotting
+        #TODO: these attributes should be in the PlotMixin and be input by the user!
         infection_correlations = (('covid', 'status', 'confirmed'), [
             ('policy', 'protection', 'facial_coverings'),
             ('policy', 'movement_restrictions',
@@ -98,49 +93,19 @@ class CovidByCountryStudy(CovidStudyMixin, PlotStudyMixin, Study):
 
     groupby_data: CovidCountryStudyGroupby = None
     min_datapoints_in_country: int = 10
+    standard_parameter_groupbys: List[Tuple[Callable, str]] = None
+    located_parameter_groupbys: List[Tuple[str, Callable, str]] = None
 
     # Plotting
     plot_parameters_by_country: bool = True
     plot_groupby_parameters: bool = True
 
     def __post_init__(self):
-        return super().__post_init__()
+        super().__post_init__()
 
-    @classmethod
-    def from_study(cls,
-                   study: Study,
-                   groupby_kwargs: dict = None,
-                   **kwargs) -> 'CovidByCountryStudy':
-        """
-        This methods creates a new instance of `ObjectPairDatasetGroupby` from the 'pair_dataset'
-        given and extracting and adding extra data from it. Which parameters to be extracted can be
-        input as keyword arguments and will be saved as attributes of the instance.
-        """
-        if groupby_kwargs is None:
-            groupby_kwargs = {}
-        return cls(data=study.data,
-                   groupby_data=CovidCountryStudyGroupby.from_df(
-                       study.data, **groupby_kwargs),
-                   **kwargs)
-
-    @classmethod
-    def from_df(cls,
-                df: pd.DataFrame,
-                covid_study_kwargs: dict = None,
-                **kwargs) -> 'CovidByCountryStudy':
-        """
-        This methods creates a new instance of `ObjectPairDatasetGroupby` from the 'pair_dataset'
-        given and extracting and adding extra data from it. Which parameters to be extracted can be
-        input as keyword arguments and will be saved as attributes of the instance.
-        """
-        if covid_study_kwargs is None:
-            covid_study_kwargs = {}
-        st = CovidCountryStudy.from_df(df, **covid_study_kwargs)
-        return cls.from_study(st, **kwargs)
-
-    @classmethod
-    def from_csv(cls, path: str, **kwargs) -> 'CovidByCountryStudy':
-        """
-        Create instance from given path.
-        """
-        return cls.from_df(pd.read_csv(path), **kwargs)
+        # Calculate groupby_data
+        if self.data is not None:
+            self.groupby_data = CovidCountryStudyGroupby.from_df(
+                self.data,
+                standard_parameter_groupbys=self.standard_parameter_groupbys,
+                located_parameter_groupbys=self.located_parameter_groupbys)

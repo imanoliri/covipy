@@ -3,7 +3,7 @@ This module contains the plotting methods and can be inherited using the PlotStu
 """
 
 from dataclasses import dataclass
-from typing import List, Tuple, Union
+from typing import List, Tuple
 
 import matplotlib.pylab as plt
 import numpy as np
@@ -45,74 +45,6 @@ class PlotStudyMixin():
         self.plot_kwargs = {"kind": self.plot_kind}
         if self.plot_kind == 'hist':
             self.plot_kwargs = {"bins": 20, **self.plot_kwargs}
-
-    @staticmethod
-    def all_columns_for_partial(partial_column: Column, df: pd.DataFrame,
-                                depth_of_columns: int) -> List[Column]:
-        """
-        Gets all columns in the dataframe related to the partial column.
-        """
-        column_with_slices = [slice(None)] * depth_of_columns
-        levels_to_slice = [
-            col_level
-            for (_, col_level) in zip(column_with_slices, partial_column)
-        ]
-        depth_to_fill_with_nones = depth_of_columns - len(levels_to_slice)
-        slicer = (*levels_to_slice, *[slice(None)] * depth_to_fill_with_nones)
-
-        return df.loc[:, slicer].columns.tolist()
-
-    def complete_column(self, partial_column: Column,
-                        df: pd.DataFrame) -> Union[Column, List[Column]]:
-        """
-        If a partial column is passed, a list of all the subcolumns is returned.
-        Else it's left as is.
-        """
-        if isinstance(partial_column, str):
-            partial_column = (partial_column, )
-        depth_of_columns = 1
-        if isinstance(df.columns, pd.MultiIndex):
-            depth_of_columns = df.columns.nlevels
-
-        if isinstance(partial_column,
-                      tuple) and len(partial_column) == depth_of_columns:
-            return partial_column
-
-        return self.all_columns_for_partial(partial_column, self.data,
-                                            depth_of_columns)
-
-    def complete_columns(self,
-                         columns: List[Column],
-                         df: pd.DataFrame = None) -> List[Column]:
-        """
-        Substitute any partial columns in the list by their related columns in the dataframe.
-        """
-        if df is None:
-            df = self.data
-        nested_columns = [[elem] if not isinstance(elem, list) else elem
-                          for elem in (self.complete_column(col, df)
-                                       for col in columns)]
-
-        return [e for elem in nested_columns for e in elem]
-
-    def prepare_columns(self,
-                        columns: List[Column],
-                        df: pd.DataFrame = None) -> List[Column]:
-        """
-        Prepares all the columns in the list of lists of columns.
-
-        Args:
-            columns (List[Column]): List of of columns to prepare.
-            df (pd.DataFrame): Dataframe used to complete missing levels in columns.
-
-        Returns:
-            List[List[Column]]: Prepared list of columns.
-        """
-        if df is None:
-            df = self.data
-        if not isinstance(columns, list):
-            columns = [columns]
-        return self.complete_columns(columns, df)
 
     def parameter_plots(self) -> List[Axes]:
         """
